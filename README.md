@@ -6,7 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][coveralls-image]][coveralls-url]
-[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+<!--[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]-->
 
 ## Install
 
