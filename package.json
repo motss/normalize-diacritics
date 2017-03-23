@@ -36,7 +36,7 @@
     "babel-plugin-transform-remove-console": "^6.8.0",
     "babel-plugin-transform-remove-debugger": "^6.8.0",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-babili": "0.0.9",
+    "babel-preset-babili": "0.0.12",
     "babel-preset-env": "^1.1.8",
     "eslint": "^3.8.0",
     "eslint-config-google": "^0.7.1",
