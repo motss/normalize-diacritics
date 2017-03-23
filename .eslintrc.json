@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "xo-space",
+    "xo-space/esnext"
+  ],
+  "rules": {
+    "no-console": [
+      "error",
+      { "allow": [ "log", "error", "warn" ] }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "max-len": "off",
+    "valid-jsdoc": [
+      "error",
+      { "prefer": { "return": "returns" } }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "normalize-diacritics",
+  "version": "0.0.0",
+  "description": "Normalize diacritics from strings",
+  "keywords": [
+    "diacritic",
+    "diacritics",
+    "motss",
+    "normalize",
+    "normalize-diacritics",
+    "npm"
+  ],
+  "homepage": "https://github.com/motss/normalize-diacritics",
+  "license": "MIT",
+  "author": "motss <wes.ngrongsen@gmail.com>",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:motss/normalize-diacritics.git"
+  },
+  "scripts": {
+    "build": "sh ./run-build.sh",
+    "build:clean": "sh ./run-build.sh clean",
+    "build:test": "rm -rf dist && babel src/ -d dist/",
+    "check": "npm run nsp && npm run snyk",
+    "lint": "eslint ./src",
+    "nsp": "nsp check",
+    "prepublish": "npm run check",
+    "snyk": "snyk test",
+    "test": "nyc ava"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-minify-empty-function": "0.0.1",
+    "babel-plugin-transform-remove-console": "^6.8.0",
+    "babel-plugin-transform-remove-debugger": "^6.8.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-env": "^1.1.8",
+    "eslint": "^3.8.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-xo-space": "^0.16.0",
+    "nsp": "^2.6.3",
+    "nyc": "^10.1.2",
+    "snyk": "^1.25.2"
+  },
+  "engines": {
+    "node": ">= 6.9.1",
+    "npm": ">= 3.10.8"
+  }
+}

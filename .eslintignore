@@ -1,0 +1,6 @@
+**/node_modules/**
+**/dist/**
+**/coverage/**
+**/*.spec.js
+**/*.test.js
+**/*test*/**
