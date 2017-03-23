@@ -1,4 +1,6 @@
 # normalize-diacritics
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/motss/normalize-diacritics.svg)](https://greenkeeper.io/)
 A custom package to output greetings.
 
 ## How to use
