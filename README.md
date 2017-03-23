@@ -7,17 +7,21 @@
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][coveralls-image]][coveralls-url]
 
-## How to use
+## Install
 
-1. Install via `npm`: `npm install --save normalize-diacritics`.
+```sh
+$ npm install --save normalize-diacritics
+```
 
-1. Brief example to use the package.
+## Usage
+
+Brief example to show how to use:
 
 ```js
 const { diacritics, normalize } = require('normalize-diacritics');
 
 /* To show the list of diacritics */
-console.log(diacritics);
+console.log(diacritics);  // { letter: ' ', diacritics: /[\u00a0]/g } ...
 
 /* To normalize string */
 const str = 'söme stüff with áccènts';
