@@ -25,7 +25,7 @@
     "check": "npm run nsp && npm run snyk",
     "lint": "eslint ./src",
     "nsp": "nsp check",
-    "prepublish": "npm run check",
+    "prepublish": "npm run check && npm run build",
     "snyk": "snyk test",
     "test": "nyc ava"
   },
