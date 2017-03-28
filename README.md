@@ -6,7 +6,9 @@
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][coveralls-image]][coveralls-url]
+[![codecov][codecov-image]][codecov-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
+
 <!--[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]-->
 
 ## Install
@@ -43,7 +45,10 @@ normalize(str); // some stuff with accents
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
 [coveralls-image]: https://coveralls.io/repos/github/motss/normalize-diacritics/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
-[greenkeeper-image]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg
-[greenkeeper-url]: https://greenkeeper.io/
 [snyk-image]: https://snyk.io/test/github/motss/normalize-diacritics/badge.svg
 [snyk-url]: https://snyk.io/test/github/motss/normalize-diacritics
+[codecov-image]: https://codecov.io/gh/motss/normalize-diacritics/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
+
+<!--[greenkeeper-image]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg-->
+<!--[greenkeeper-url]: https://greenkeeper.io/-->
