@@ -27,7 +27,8 @@
     "nsp": "nsp check",
     "prepublish": "npm run check && npm run build",
     "snyk": "snyk test",
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
     "ava": "^0.18.2",
@@ -38,6 +39,7 @@
     "babel-polyfill": "^6.16.0",
     "babel-preset-babili": "0.0.9",
     "babel-preset-env": "^1.1.8",
+    "coveralls": "^2.12.0",
     "eslint": "^3.8.0",
     "eslint-config-google": "^0.7.1",
     "eslint-config-xo-space": "^0.16.0",
