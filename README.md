@@ -41,8 +41,8 @@ normalize(str); // some stuff with accents
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
 [daviddm-image]: https://david-dm.org/motss/normalize-diacritics.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
-[coveralls-image]: https://coveralls.io/repos/github/motss/normalize-diacritics/badge.svg
-[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics
+[coveralls-image]: https://coveralls.io/repos/github/motss/normalize-diacritics/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
 [greenkeeper-image]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg
 [greenkeeper-url]: https://greenkeeper.io/
 [snyk-image]: https://snyk.io/test/github/motss/normalize-diacritics/badge.svg
