@@ -11,3 +11,5 @@ dist/
 dist/**/__mocks__/
 dist/**/__tests__/
 .nyc_output
+out/
+coverage*

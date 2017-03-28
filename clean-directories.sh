@@ -3,7 +3,7 @@
 clear; printf "Running delete-directories script...\n"
 
 has_unused_directories=false
-directories="dist/ node_modules/ .nyc_output/ coverage/ npm-debug.log yarn-error.log"
+directories="dist/ node_modules/ .nyc_output/ coverage/ npm-debug.log yarn-error.log out/ coverage.lcov"
 
 for directory in $directories; do
   if [ -d "$directory" ] || [ -f "$directory" ]; then
