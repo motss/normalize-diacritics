@@ -148,9 +148,7 @@ class NormalizeDiacritics {
 }
 
 /* Exporting module on Node.js */
-if (typeof module !== 'undefined') {
-  module.exports = {
-    diacritics: NormalizeDiacritics.diacritics,
-    normalize: NormalizeDiacritics.normalize
-  };
-}
+module.exports = {
+  diacritics: NormalizeDiacritics.diacritics,
+  normalize: NormalizeDiacritics.normalize
+};
