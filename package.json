@@ -27,9 +27,10 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint ./src",
     "nsp": "nsp check",
-    "prepublish": "npm run check && npm run build",
+    "nyc": "nyc report --reporter=lcov",
+    "prepublish": "npm run lint && npm run check && npm run build",
     "snyk": "snyk test",
-    "test": "nyc ava"
+    "test": "nyc ava && npm run nyc"
   },
   "devDependencies": {
     "ava": "^0.18.2",
