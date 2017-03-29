@@ -1,6 +1,6 @@
 #!/bin/sh
 
-clear; printf "Running delete-directories script...\n"
+clear; printf "Running %s script...\n" "$(basename "$0" .sh)"
 
 has_unused_directories=false
 directories="dist/ node_modules/ .nyc_output/ coverage/ npm-debug.log yarn-error.log out/ coverage.lcov"
