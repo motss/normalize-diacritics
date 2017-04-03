@@ -1,6 +1,6 @@
 {
   "name": "normalize-diacritics",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Normalize diacritics from strings",
   "keywords": [
     "diacritic",
