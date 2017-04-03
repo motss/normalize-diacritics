@@ -1,0 +1,27 @@
+environment:
+  CODECOV_TOKEN:
+    secure: 5SygvlgfTewBB3CTmBxUfQ==
+  SNYK_TOKEN:
+    secure: IyV3vkSZTlBKOtJfcNFk3ZyRSwSRKZUg4YUulfphVR8FCMj94J7az6yIoqNALOPq
+  matrix:
+    - nodejs_version: 6
+    - nodejs_version: 7
+
+platform:
+  - x86
+  - x64
+
+# Install scripts. (runs after repo cloning)
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm install -g npm
+  - npm install
+
+# Post-install test scripts.
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+# Don't actually build.
+build: off
