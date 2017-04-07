@@ -5,6 +5,9 @@
     "xo-space",
     "xo-space/esnext"
   ],
+  "plugins": [
+    "security"
+  ],
   "rules": {
     "no-console": [
       "error",
