@@ -3,9 +3,9 @@
 node_modules/
 .build/
 .tmp/
-npm-debug.log
+npm-debug.log*
 *.env
-yarn-error.log
+yarn-error.log*
 coverage/
 dist/
 dist/**/__mocks__/

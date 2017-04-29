@@ -6,7 +6,8 @@
     "xo-space/esnext"
   ],
   "plugins": [
-    "security"
+    "security",
+    "optimize-regex"
   ],
   "rules": {
     "no-console": [

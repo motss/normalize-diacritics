@@ -4,21 +4,23 @@
     ["env", { "targets": { "node": "current" } } ]
   ],
   "plugins": [
+    "transform-minify-booleans",
+    "transform-simplify-comparison-operators",
+    "transform-undefined-to-void",
+    "transform-merge-sibling-variables",
+    "transform-member-expression-literals",
+    "transform-property-literals",
+
     "minify-constant-folding",
-    [ "minify-dead-code-elimination", { "optimizeRawSize": true } ],
+    "minify-type-constructors",
     "minify-flip-comparisons",
     "minify-guarded-expressions",
     "minify-infinity",
-    [ "minify-mangle-names", { "blacklist": { } } ],
+    "minify-builtins",
     "minify-simplify",
-    "minify-type-constructors",
-    "transform-member-expression-literals",
-    "transform-merge-sibling-variables",
-    "transform-minify-booleans",
-    "transform-property-literals",
-    "transform-simplify-comparison-operators",
-    "transform-undefined-to-void",
-    "minify-empty-function"
+    "minify-empty-function",
+    [ "minify-mangle-names", { "blacklist": { } } ],
+    [ "minify-dead-code-elimination", { "optimizeRawSize": true } ]
   ],
   "env": {
     "build": {
