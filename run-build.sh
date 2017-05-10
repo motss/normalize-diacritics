@@ -26,6 +26,15 @@ printf "\nBuilding project...\n"
 if [ -d "dist/" ]; then
   rm -rf dist/
 fi
-BABEL_ENV=build babel src/ -d dist/
+
+if [ ! -z "$2" ] && [ "$2" = "production" ]; then
+  printf "\nCompiling for production use...\n"
+  BABEL_ENV=build babel  src/ -d dist/
+elif [ ! -z "$1" ] && [ "$1" = "production" ]; then
+  printf "\nCompiling for production use...\n"
+  BABEL_ENV=build babel  src/ -d dist/
+else
+  BABEL_ENV=default babel src/ -d dist/
+fi
 
 printf "\nDone.\n"

@@ -19,9 +19,9 @@
     "url": "git@github.com:motss/normalize-diacritics.git"
   },
   "scripts": {
-    "build": "sh ./run-build.sh",
-    "build:clean": "sh ./run-build.sh clean",
-    "build:test": "rm -rf dist && babel src/ -d dist/",
+    "build": "sh ./run-build.sh production",
+    "build:clean": "sh ./run-build.sh clean production",
+    "build:test": "sh ./run-build.sh",
     "check": "npm run nsp && npm run snyk",
     "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
@@ -30,17 +30,13 @@
     "nyc": "nyc report --reporter=lcov",
     "prepublish": "npm run lint && npm run check && npm run build",
     "snyk": "snyk test",
-    "test": "nyc ava && npm run nyc"
+    "test": "snyk test && nyc ava && npm run nyc"
   },
   "devDependencies": {
-    "ava": "^0.18.2",
+    "ava": "^0.19.1",
     "babel-cli": "^6.14.0",
-    "babel-plugin-minify-builtins": "0.0.2",
-    "babel-plugin-minify-empty-function": "0.0.1",
-    "babel-plugin-transform-remove-console": "^6.8.0",
-    "babel-plugin-transform-remove-debugger": "^6.8.0",
     "babel-polyfill": "^6.16.0",
-    "babel-preset-babili": "0.0.9",
+    "babel-preset-babili": "0.0.12",
     "babel-preset-env": "^1.1.8",
     "codecov": "^2.1.0",
     "coveralls": "^2.12.0",
@@ -66,5 +62,6 @@
       "**/__tests__/**",
       "**/node_modules/**"
     ]
-  }
+  },
+  "snyk": true
 }

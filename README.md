@@ -14,8 +14,7 @@
 [![NSP Status][nsp-image]][nsp-url]
 [![Inline docs][inch-image]][inch-url]
 [![GitHub license][license-image]][license-url]
-
-<!--[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]-->
+[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 ## Install
 
@@ -37,6 +36,10 @@ console.log(diacritics);  // { letter: ' ', diacritics: /[\u00a0]/g } ...
 const str = 'söme stüff with áccènts';
 normalize(str); // some stuff with accents
 ```
+
+## Demo
+
+[Simple demo on Runkit](https://runkit.com/motss/normalize-diacritics)
 
 ## License
 
@@ -65,6 +68,6 @@ normalize(str); // some stuff with accents
 [inch-url]: http://inch-ci.org/github/motss/normalize-diacritics
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://motss.mit-license.org/
+[greenkeeper-image]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg
+[greenkeeper-url]: https://greenkeeper.io/
 
-<!--[greenkeeper-image]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg-->
-<!--[greenkeeper-url]: https://greenkeeper.io/-->

@@ -1,5 +1,3 @@
-// @ts-check
-
 /**
  * A constructor for NormalizeDiacritics.
  * A more complete list of diacritics are from

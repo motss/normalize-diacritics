@@ -4,3 +4,5 @@
 **/*.spec.js
 **/*.test.js
 **/*test*/**
+out/
+logs/**/[^.]*
