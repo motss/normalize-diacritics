@@ -4,11 +4,11 @@
 
 ### Expected outcome
 
-<!-- Example: The  -->
+<!-- Example: It does not work correctly. -->
 
 ### Actual outcome
 
-<!-- Example: The page turns pink. -->
+<!-- Example: It works expected without any errors. -->
 
 ### Live Demo
 
