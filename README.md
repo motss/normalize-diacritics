@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/motss/normalize-diacritics.png?label=ready&title=Ready)](https://waffle.io/motss/normalize-diacritics?utm_source=badge)
 # normalize-diacritics
 
 [![NPM][nodei-image]][nodei-url]
