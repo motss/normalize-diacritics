@@ -33,7 +33,7 @@
     "test": "snyk test && nyc ava && npm run nyc"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.23.0",
     "babel-cli": "^6.14.0",
     "babel-polyfill": "^6.16.0",
     "babel-preset-babili": "0.1.2",
