@@ -1,11 +1,11 @@
+max_jobs: 4
+
 environment:
   CODECOV_TOKEN:
     secure: 5SygvlgfTewBB3CTmBxUfQ==
-  SNYK_TOKEN:
-    secure: IyV3vkSZTlBKOtJfcNFk3ZyRSwSRKZUg4YUulfphVR8FCMj94J7az6yIoqNALOPq
   matrix:
-    - nodejs_version: 6
-    - nodejs_version: 7
+    - nodejs_version: 8
+    - nodejs_version: 9
 
 platform:
   - x86
@@ -15,13 +15,22 @@ platform:
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - npm install -g npm
-  - npm install
-
-# Post-install test scripts.
-test_script:
   - node --version
   - npm --version
+  - npm install
+
+# Build
+build_script:
+  - npm run build
+
+# Post-install test scripts
+test_script:
   - npm test
 
-# Don't actually build.
+# Submit coverage reports
+after_test:
+  - npm run coveralls
+  - npm run codecov
+
+# Don't actually build
 build: off

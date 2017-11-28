@@ -1,6 +1,9 @@
 language: node_js
 dist: trusty
 node_js:
-  - v6
-  - v7
+  - v8
+  - v9
+script:
+  - npm run build
+  - npm run test
 after_success: npm run coveralls && npm run codecov

@@ -19,39 +19,45 @@
     "url": "git@github.com:motss/normalize-diacritics.git"
   },
   "scripts": {
-    "build": "sh ./run-build.sh production",
-    "build:clean": "sh ./run-build.sh clean production",
-    "build:test": "sh ./run-build.sh",
-    "check": "npm run nsp && npm run snyk",
+    "build": "npm run ts && cross-env NODE_ENV=production gulp build && rm -rf gulpfile.js",
     "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "eslint ./src",
+    "gulp": "gulp build",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "lint:fix": "tslint -p . -c tslint.json --fix",
     "nsp": "nsp check",
     "nyc": "nyc report --reporter=lcov",
-    "prepublish": "npm run lint && npm run check && npm run build",
-    "snyk": "snyk test",
-    "test": "snyk test && nyc ava && npm run nyc"
+    "prepare": "npm run lint && npm run nsp && npm run build",
+    "test": "nyc ava && npm run nyc",
+    "ts": "tsc gulpfile.ts"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "babel-cli": "^6.14.0",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-babili": "0.1.2",
-    "babel-preset-env": "^1.1.8",
-    "codecov": "^2.1.0",
-    "coveralls": "^2.12.0",
-    "eslint": "^3.8.0",
-    "eslint-config-google": "^0.8.0",
-    "eslint-config-xo-space": "^0.16.0",
-    "eslint-plugin-optimize-regex": "^1.1.1",
-    "eslint-plugin-security": "^1.3.0",
-    "nsp": "^2.6.3",
-    "nyc": "^11.0.0",
-    "snyk": "^1.25.2"
+    "@std/esm": "^0.17.2",
+    "@types/node": "^8.0.53",
+    "ava": "^0.24.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0",
+    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-typescript": "^3.2.3",
+    "nsp": "^3.1.0",
+    "nyc": "^11.3.0",
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
   },
   "engines": {
-    "node": ">= 6.9.1",
-    "npm": ">= 3.10.8"
+    "node": ">= 8.9.0",
+    "npm": ">= 5.5.1"
   },
   "nyc": {
     "exclude": [
@@ -63,5 +69,14 @@
       "**/node_modules/**"
     ]
   },
-  "snyk": true
+  "dependencies": {},
+  "@std/esm": "cjs",
+  "ava": {
+    "files": [
+      "dist/test/**/*.js"
+    ],
+    "require": [
+      "@std/esm"
+    ]
+  }
 }
