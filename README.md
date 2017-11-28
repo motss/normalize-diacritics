@@ -84,7 +84,7 @@ This method accepts an input string that contains any accents/ diacritics and no
 ### normalizeSync(input)
 
  - input <[string][string-mdn-url]> Input string that contains accents/ diacritics.
- - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>>
+ - returns: <[string][string-mdn-url]>
 
 This methods works the same as `normalize(input)` except that this is a synchronous version of `normalize(input)`.
 
