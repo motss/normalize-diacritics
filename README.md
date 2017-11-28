@@ -9,7 +9,6 @@
 [![NPM][nodei-badge]][nodei-url]
 
 [![Build Status][travis-badge]][travis-url]
-[![AppVeyor][appveyor-badge]][appveyor-url]
 [![Version][version-badge]][version-url]
 [![Downloads][downloads-badge]][downloads-url]
 [![MIT License][mit-license-badge]][mit-license-url]
@@ -99,7 +98,6 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [nodei-badge]: https://nodei.co/npm/normalize-diacritics.png?downloads=true&downloadRank=true&stars=true
 
 [travis-badge]: https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square
-[appveyor-badge]: https://ci.appveyor.com/api/projects/status/g3n1hhl18w3crcrb?svg=true
 
 [version-badge]: https://img.shields.io/npm/v/delvery.svg?style=flat-square
 [downloads-badge]: https://img.shields.io/npm/dm/delvery.svg?style=flat-square
@@ -124,7 +122,6 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [nodei-url]: https://nodei.co/npm/normalize-diacritics/
 
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
-[appveyor-url]: https://ci.appveyor.com/project/motss/normalize-diacritics/branch/master
 [version-url]: https://npmjs.org/package/normalize-diacritics
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
 [mit-license-url]: https://github.com/Zumata/normalize-diacritics/blob/master/LICENSE
