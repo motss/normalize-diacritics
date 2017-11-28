@@ -31,13 +31,6 @@
 
 ## Setup
 
-### Pre-requisites
-
-Please make sure that you have the followings installed on your machine:
-
-- `node >= 8.9.0` ___(In Zumata, we internally use the latest LTS version ([node:carbon][node-releases-url]) for all our Node.js applications.)___
-- `npm >= 5.5.1` ___(The minimum NPM version for [node:carbon][node-releases-url].)___
-
 ### Install the package via NPM
 
 ```sh
@@ -95,12 +88,14 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
+
+
 [nodei-badge]: https://nodei.co/npm/normalize-diacritics.png?downloads=true&downloadRank=true&stars=true
 
-[travis-badge]: https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square
+[travis-badge]: https://img.shields.io/travis/motss/normalize-diacritics.svg?style=flat-square
 
-[version-badge]: https://img.shields.io/npm/v/delvery.svg?style=flat-square
-[downloads-badge]: https://img.shields.io/npm/dm/delvery.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/normalize-diacritics.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dm/normalize-diacritics.svg?style=flat-square
 [mit-license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
 [nsp-badge]: https://nodesecurity.io/orgs/motss/projects/92a9a3b3-c0c8-4172-917d-f1c7e0d5ef9f/badge
 [daviddm-badge]: https://img.shields.io/david/expressjs/express.svg?style=flat-square
@@ -108,14 +103,14 @@ This methods works the same as `normalize(input)` except that this is a synchron
 
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
 
-[coveralls-badge]: https://coveralls.io/repos/github/Zumata/normalize-diacritics/badge.svg?branch=master
-[codecov-badge]: https://codecov.io/gh/Zumata/normalize-diacritics/branch/master/graph/badge.svg
+[coveralls-badge]: https://coveralls.io/repos/github/motss/normalize-diacritics/badge.svg?branch=master
+[codecov-badge]: https://codecov.io/gh/motss/normalize-diacritics/branch/master/graph/badge.svg
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
-[inch-badge]: http://inch-ci.org/github/zumata/normalize-diacritics.svg?branch=master
+[inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=master
 [codebeat-badge]: https://codebeat.co/badges/8a0eb7c1-b944-41b1-ad87-5f0bd392873b
 
-[waffle-badge]: https://badge.waffle.io/Zumata/normalize-diacritics.png?label=ready&title=Ready
+[waffle-badge]: https://badge.waffle.io/motss/normalize-diacritics.png?label=ready&title=Ready
 
 
 
@@ -124,12 +119,12 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
 [version-url]: https://npmjs.org/package/normalize-diacritics
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
-[mit-license-url]: https://github.com/Zumata/normalize-diacritics/blob/master/LICENSE
+[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
 [nsp-url]: https://nodesecurity.io/orgs/motss/projects/02e1b52b-3dc8-4fcf-aa91-8676541b4348
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
 [greenkeeper-url]: https://greenkeeper.io/
 
-[coc-url]: https://github.com/Zumata/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
+[coc-url]: https://github.com/motss/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
 
 [coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
 [codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
