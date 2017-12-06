@@ -6,4 +6,3 @@ node_js:
 script:
   - npm run build
   - npm run test
-after_success: npm run coveralls && npm run codecov

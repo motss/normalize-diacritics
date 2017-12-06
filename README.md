@@ -14,12 +14,8 @@
 [![MIT License][mit-license-badge]][mit-license-url]
 [![NSP Status][nsp-badge]][nsp-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
-[![Greenkeeper badge][greenkeeper-badge]][greenkeeper-url]
 
 [![Code of Conduct][coc-badge]][coc-url]
-
-[![Coverage percentage][coveralls-badge]][coveralls-url]
-[![codecov][codecov-badge]][codecov-url]
 
 <!-- [![Codacy Badge][codacy-badge]][codacy-url] -->
 [![Inline docs][inch-badge]][inch-url]
@@ -28,6 +24,11 @@
 [![Stories in Ready][waffle-badge]][waffle-url]
 
 > A simple NPM package to remove accents/ diacritics in strings in Javascript.
+
+## Pre-requisite
+
+- [Node.js][node-js-url] >= 8.9.0
+- [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes [Node.js][node-js-url] so there is no need to install separately.)
 
 ## Setup
 
@@ -84,6 +85,8 @@ This methods works the same as `normalize(input)` except that this is a synchron
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
+[node-js-url]: https://nodejs.org
+[npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
 [string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -99,12 +102,8 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [mit-license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
 [nsp-badge]: https://nodesecurity.io/orgs/motss/projects/92a9a3b3-c0c8-4172-917d-f1c7e0d5ef9f/badge
 [daviddm-badge]: https://img.shields.io/david/expressjs/express.svg?style=flat-square
-[greenkeeper-badge]: https://badges.greenkeeper.io/motss/normalize-diacritics.svg
 
 [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
-
-[coveralls-badge]: https://coveralls.io/repos/github/motss/normalize-diacritics/badge.svg?branch=master
-[codecov-badge]: https://codecov.io/gh/motss/normalize-diacritics/branch/master/graph/badge.svg
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
 [inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=master
@@ -122,12 +121,8 @@ This methods works the same as `normalize(input)` except that this is a synchron
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
 [nsp-url]: https://nodesecurity.io/orgs/motss/projects/02e1b52b-3dc8-4fcf-aa91-8676541b4348
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
-[greenkeeper-url]: https://greenkeeper.io/
 
 [coc-url]: https://github.com/motss/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
-
-[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
-[codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
 
 [inch-url]: http://inch-ci.org/github/motss/normalize-diacritics
 

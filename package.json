@@ -20,17 +20,15 @@
   },
   "scripts": {
     "build": "npm run ts && cross-env NODE_ENV=production gulp build && rm -rf gulpfile.js",
-    "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "gulp": "gulp build",
     "lint": "tslint --project tsconfig.json --config tslint.json",
     "lint:fix": "tslint -p . -c tslint.json --fix",
     "nsp": "nsp check",
-    "nyc": "nyc report --reporter=lcov",
-    "prepare": "npm run lint && npm run nsp && npm run build",
-    "test": "nyc ava && npm run nyc",
+    "prepublishOnly": "npm run build",
+    "test": "ava test/",
     "ts": "tsc gulpfile.ts"
   },
+  "dependencies": {},
   "devDependencies": {
     "@std/esm": "^0.17.2",
     "@types/node": "^8.0.53",
@@ -40,8 +38,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.2.0",
-    "codecov": "^3.0.0",
-    "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -59,17 +55,6 @@
     "node": ">= 8.9.0",
     "npm": ">= 5.5.1"
   },
-  "nyc": {
-    "exclude": [
-      "{,**}/!(index.js)",
-      "test",
-      "test{,-*}.js",
-      "**/*.test.js",
-      "**/__tests__/**",
-      "**/node_modules/**"
-    ]
-  },
-  "dependencies": {},
   "@std/esm": "cjs",
   "ava": {
     "files": [

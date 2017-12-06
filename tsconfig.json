@@ -3,8 +3,8 @@
     "allowUnusedLabels": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "declaration": true,
     "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
     "traceResolution": false,
     "newLine": "LF",
     "experimentalDecorators": true,
@@ -19,14 +19,17 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "rootDir": "src",
-    "outDir": "dist"
+    "rootDir": ".",
+    "outDir": ".",
+    "declaration": true,
+    "declarationDir": "."
   },
   "include": [
     "src/**/*",
-    "types/jsx.d.ts"
+    "types/*.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/demo"
   ]
 }
