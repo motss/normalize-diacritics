@@ -28,7 +28,7 @@
 ## Pre-requisite
 
 - [Node.js][node-js-url] >= 8.9.0
-- [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes [Node.js][node-js-url] so there is no need to install separately.)
+- [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
 
 ## Setup
 
@@ -70,14 +70,14 @@ const { normalize } = require('normalize-diacritics');
 ### normalize(input)
 
  - input <[string][string-mdn-url]> Input string that contains accents/ diacritics.
- - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>>
+ - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method accepts an input string that contains any accents/ diacritics and normalizes all of them asynchronously and the normalized string will be output as a result.
 
 ### normalizeSync(input)
 
  - input <[string][string-mdn-url]> Input string that contains accents/ diacritics.
- - returns: <[string][string-mdn-url]>
+ - returns: <[string][string-mdn-url]> Promise which resolves with normalized input string.
 
 This methods works the same as `normalize(input)` except that this is a synchronous version of `normalize(input)`.
 

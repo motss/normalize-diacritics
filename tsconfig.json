@@ -19,7 +19,7 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "rootDir": ".",
+    "rootDir": "src",
     "outDir": ".",
     "declaration": true,
     "declarationDir": "."
