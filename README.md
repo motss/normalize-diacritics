@@ -1,7 +1,7 @@
 <div align="center" style="text-align: center;">
   <h1 style="border-bottom: none;">normalize-diacritics</h1>
 
-  <p>Remove accents/ diacritics in strings</p>
+  <p>Remove accents/ diacritics in string</p>
 </div>
 
 <hr />
@@ -23,23 +23,33 @@
 
 [![Stories in Ready][waffle-badge]][waffle-url]
 
-> A simple NPM package to remove accents/ diacritics in strings in Javascript.
+> Simple [NPM][npm-url] package to remove any accents/ diacritics found in a string.
+
+## Table of contents
+
+- [Pre-requisite](#pre-requisite)
+- [How to use](#how-to-use)
+  - [Install](#install)
+  - [Typescript or Node.js with native ES Modules](#typescript-or-nodejs-with-native-es-modules)
+  - [CommonJS's require](#commonjss-require)
+- [API Reference](#api-reference)
+  - [normalize(input)](#normalizeinput)
+  - [normalizeSync(input)](#normalizesyncinput)
+- [License](#license)
 
 ## Pre-requisite
 
 - [Node.js][node-js-url] >= 8.9.0
 - [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
 
-## Setup
+## How to use
 
-### Install the package via NPM
+### Install
 
 ```sh
-# NPM install
+# Install via NPM
 $ npm install --save normalize-diacritics
 ```
-
-## How to use
 
 ### Typescript or Node.js with native ES Modules
 
@@ -54,7 +64,7 @@ import normalize from 'normalize-diacritics';
 })();
 ```
 
-### CommonJS's require
+### Node.js
 
 ```js
 const { normalize } = require('normalize-diacritics');
@@ -72,14 +82,14 @@ const { normalize } = require('normalize-diacritics');
  - input <[string][string-mdn-url]> Input string that contains accents/ diacritics.
  - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
-This method accepts an input string that contains any accents/ diacritics and normalizes all of them asynchronously and the normalized string will be output as a result.
+This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
 
 ### normalizeSync(input)
 
  - input <[string][string-mdn-url]> Input string that contains accents/ diacritics.
  - returns: <[string][string-mdn-url]> Promise which resolves with normalized input string.
 
-This methods works the same as `normalize(input)` except that this is a synchronous version of `normalize(input)`.
+This methods works the same as `normalize(input)` except that this is the synchronous version.
 
 ## License
 
