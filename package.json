@@ -11,56 +11,44 @@
     "npm"
   ],
   "homepage": "https://github.com/motss/normalize-diacritics",
-  "license": "MIT",
-  "author": "Rong Sen Ng <wes.ngrongsen@gmail.com> (https://github.com/motss)",
-  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:motss/normalize-diacritics.git"
   },
+  "license": "MIT",
+  "author": "Rong Sen Ng <wes.ngrongsen@gmail.com> (https://github.com/motss)",
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts"
+  ],
+  "main": "./index",
   "scripts": {
-    "build": "npm run ts && cross-env NODE_ENV=production gulp build && rm -rf gulpfile.js",
-    "gulp": "gulp build",
-    "lint": "tslint --project tsconfig.json --config tslint.json",
-    "lint:fix": "tslint -p . -c tslint.json --fix",
-    "nsp": "nsp check",
-    "prepublishOnly": "npm run build",
-    "test": "ava test/",
-    "ts": "tsc gulpfile.ts"
+    "build": "npm run build:cjs && npm run build:esm && rm -rf dist/ && echo \"> [build] Done!\"",
+    "build:cjs": "npm run lint && rm -rf dist/ && tsc -p tsconfig.json && mv dist/index.js dist/index.d.ts . && echo \"> [cjs] Done!\"",
+    "build:esm": "npm run lint && rm -rf dist/ && tsc -p tsconfig.esm.json && mv dist/index.js ./index.mjs && echo \"> [esm] Done!\"",
+    "demo": "node demo/index.js",
+    "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish 'src/**/*.ts*'",
+    "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish 'src/**/*.ts*'",
+    "prepublishOnly": "npm run lint && npm run build",
+    "test": "jest --config ./.jestrc.json"
   },
   "dependencies": {},
   "devDependencies": {
-    "@std/esm": "^0.18.0",
-    "@types/node": "^8.5.1",
-    "ava": "^0.24.0",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-function-bind": "^6.22.0",
+    "@messageflow/tslint-config": "^1.1.0",
+    "@types/jest": "^23.3.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-minify": "^0.2.0",
-    "cross-env": "^5.1.1",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-typescript": "^3.2.3",
-    "nsp": "^3.1.0",
-    "tslint": "^5.8.0",
-    "tslint-config-airbnb": "^5.4.2",
-    "tslint-config-prettier": "^1.6.0",
-    "typescript": "^2.6.2"
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
   },
   "engines": {
     "node": ">= 8.9.0",
     "npm": ">= 5.5.1"
   },
-  "@std/esm": "cjs",
-  "ava": {
-    "files": [
-      "dist/test/**/*.js"
-    ],
-    "require": [
-      "@std/esm"
-    ]
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -3,6 +3,11 @@ dist: trusty
 node_js:
   - v8
   - v9
+  - v10
+before_script:
+  - npm install -g npm@latest coveralls codecov --quiet
 script:
-  - npm run build
-  - npm run test
+  - npm cit
+after_success:
+  - 'cat ./coverage/lcov.info | coveralls'
+- 'cat ./coverage/lcov.info | codecov'

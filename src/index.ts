@@ -1,6 +1,6 @@
 // @ts-check
 
-export declare interface Diacritics {
+export interface Diacritics {
   letter: string;
   diacritics: RegExp;
 }
@@ -111,37 +111,37 @@ export const diacritics: Diacritics[] = [
 ];
 
 function replaceDiacritics(inputChar: string) {
-  /**
-   * NOTE: Normalizing accents/ diacritics in ES6
-   * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
-   */
-  if (typeof ''.normalize === 'function') {
-    return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  }
-
-  const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
-
-  return Array.isArray(normalized) && normalized.length > 0
-    ? normalized[0].letter
-    : inputChar;
-}
-
-export function normalizeSync(input: string = '') {
-  if (typeof input !== 'string') {
-    throw new TypeError('input is not a string');
-  }
-
-  return input.length > 1
-    ? input.replace(/(\S)/g, (_, p1) => replaceDiacritics(p1))
-    : input;
-}
-
-export async function normalize(input: string = '') {
   try {
-    return normalizeSync(input);
+    /**
+     * NOTE: Normalizing accents/ diacritics in ES6
+     * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
+     */
+    if (typeof ''.normalize === 'function') {
+      return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
+    const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
+
+    return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
   } catch (e) {
     throw e;
   }
+}
+
+export function normalizeSync(input: string) {
+  try {
+    if (typeof input !== 'string') {
+      throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
+    }
+
+    return input.length > 1 ? input.replace(/(\S)/g, (_, p) => replaceDiacritics(p)) : input;
+  } catch (e) {
+    throw e;
+  }
+}
+
+export async function normalize(input: string = '') {
+  return normalizeSync(input);
 }
 
 export default normalize;
