@@ -10,4 +10,4 @@ script:
   - npm cit
 after_success:
   - 'cat ./coverage/lcov.info | coveralls'
-- 'cat ./coverage/lcov.info | codecov'
+  - 'cat ./coverage/lcov.info | codecov'
