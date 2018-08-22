@@ -6,32 +6,35 @@
 
 <hr />
 
-[![NPM][nodei-badge]][nodei-url]
+[![Version][version-badge]][version-url]
+[![Node version][node-version-badge]][node-version-url]
+[![MIT License][mit-license-badge]][mit-license-url]
+
+[![Downloads][downloads-badge]][downloads-url]
+[![Total downloads][total-downloads-badge]][downloads-url]
+[![Packagephobia][packagephobia-badge]][packagephobia-url]
+[![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
 [![Build Status][travis-badge]][travis-url]
-[![Version][version-badge]][version-url]
-[![Downloads][downloads-badge]][downloads-url]
-[![MIT License][mit-license-badge]][mit-license-url]
-[![NSP Status][nsp-badge]][nsp-url]
+[![CircleCI][circleci-badge]][circleci-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
+[![codecov][codecov-badge]][codecov-url]
+[![Coverage Status][coveralls-badge]][coveralls-url]
 
+[![codebeat badge][codebeat-badge]][codebeat-url]
+[![Codacy Badge][codacy-badge]][codacy-url]
 [![Code of Conduct][coc-badge]][coc-url]
-
-<!-- [![Codacy Badge][codacy-badge]][codacy-url] -->
-[![Inline docs][inch-badge]][inch-url]
-<!-- [![codebeat badge][codebeat-badge]][codebeat-url] -->
-
-[![Stories in Ready][waffle-badge]][waffle-url]
 
 > Simple [NPM][npm-url] package to remove any accents/ diacritics found in a string.
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Pre-requisite](#pre-requisite)
 - [How to use](#how-to-use)
   - [Install](#install)
   - [Typescript or Node.js with native ES Modules](#typescript-or-nodejs-with-native-es-modules)
-  - [CommonJS's require](#commonjss-require)
+  - [Node.js](#nodejs)
 - [API Reference](#api-reference)
   - [normalize(input)](#normalizeinput)
   - [normalizeSync(input)](#normalizesyncinput)
@@ -95,45 +98,56 @@ This methods works the same as `normalize(input)` except that this is the synchr
 
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
+<!-- References -->
 [node-js-url]: https://nodejs.org
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
+
+<!-- MDN -->
+[map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 [string-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+[object-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+[number-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+[boolean-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[html-style-element-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
+<!-- Badges -->
+[version-badge]: https://flat.badgen.net/npm/v/normalize-diacritics
+[node-version-badge]: https://flat.badgen.net/npm/node/normalize-diacritics
+[mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
+[downloads-badge]: https://flat.badgen.net/npm/dm/normalize-diacritics
+[total-downloads-badge]: https://flat.badgen.net/npm/dt/normalize-diacritics?label=total%20downloads
+[packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
+[bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
 
-[nodei-badge]: https://nodei.co/npm/normalize-diacritics.png?downloads=true&downloadRank=true&stars=true
-
-[travis-badge]: https://img.shields.io/travis/motss/normalize-diacritics.svg?style=flat-square
-
-[version-badge]: https://img.shields.io/npm/v/normalize-diacritics.svg?style=flat-square
-[downloads-badge]: https://img.shields.io/npm/dm/normalize-diacritics.svg?style=flat-square
-[mit-license-badge]: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-[nsp-badge]: https://nodesecurity.io/orgs/motss/projects/92a9a3b3-c0c8-4172-917d-f1c7e0d5ef9f/badge
-[daviddm-badge]: https://img.shields.io/david/expressjs/express.svg?style=flat-square
-
-[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics
+[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics
+[daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
+[codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov
+[coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/normalize-diacritics?label=coveralls
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
 [inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=master
 [codebeat-badge]: https://codebeat.co/badges/8a0eb7c1-b944-41b1-ad87-5f0bd392873b
+[coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
-[waffle-badge]: https://badge.waffle.io/motss/normalize-diacritics.png?label=ready&title=Ready
+<!-- Links -->
+[version-url]: https://www.npmjs.com/package/normalize-diacritics
+[node-version-url]: https://nodejs.org/en/download
+[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
 
-
-
-[nodei-url]: https://nodei.co/npm/normalize-diacritics/
+[downloads-url]: http://www.npmtrends.com/normalize-diacritics
+[packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
+[bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
 
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
-[version-url]: https://npmjs.org/package/normalize-diacritics
-[downloads-url]: http://www.npmtrends.com/normalize-diacritics
-[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
-[nsp-url]: https://nodesecurity.io/orgs/motss/projects/02e1b52b-3dc8-4fcf-aa91-8676541b4348
+[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/master
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
+[codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
+[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
 
+[codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
+[codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
 [coc-url]: https://github.com/motss/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
-
-[inch-url]: http://inch-ci.org/github/motss/normalize-diacritics
-
-[waffle-url]: https://waffle.io/motss/normalize-diacritics?utm_source=badge
