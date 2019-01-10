@@ -1,4 +1,4 @@
-language: minimal
+language: python
 
 matrix:
   include:
@@ -7,11 +7,11 @@ matrix:
     - os: windows
       name: windows:deno_testing
 
-before_install:
-  - export PATH=$HOME/.deno/bin:$PATH
+# before_install:
 
 install:
   - curl -L https://deno.land/x/install/install.py | python
+  - export PATH=$HOME/.deno/bin:$PATH
 
 script:
   - deno -v
