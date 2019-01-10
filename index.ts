@@ -116,7 +116,16 @@ function replaceDiacritics(inputChar: string) {
    * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
    */
   if (typeof ''.normalize === 'function') {
-    return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    return inputChar
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+      // .split('')
+      // .filter((n) => {
+      //   const nCharCode = n.charCodeAt(0);
+
+      //   return !(nCharCode >= 768 && nCharCode <= 879);
+      // })
+      // .join('');
   }
 
   const normalized = diacritics.filter(n => n.diacritics.test(inputChar));

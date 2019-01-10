@@ -1,6 +1,6 @@
 import { test, assertEqual } from 'https://deno.land/x/testing/mod.ts';
 
-import { normalize } from '..';
+import { normalize } from '../index.ts';
 
 async function throwsWhenInvalidInput() {
   try {
@@ -72,8 +72,14 @@ async function returnsOriginalCharacterWhenNoMatchFound() {
 
 Promise.all([
   throwsWhenInvalidInput,
-  normalizesStrings,
   normalizesStringsWithoutInput,
   normalizesStringsWithoutUsingNativeFunction,
   returnsOriginalCharacterWhenNoMatchFound,
 ].map(n => test(n)));
+
+/**
+ * FIXME: String#normalize is not working on `deno`.
+ *
+ * Related issue: https://github.com/denoland/deno/issues/627
+ */
+test(normalizesStrings);
