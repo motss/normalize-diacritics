@@ -34,7 +34,7 @@
 ## Usage
 
 ```ts
-import { normalize } from 'https://denopkg.com/motss/normalize-diacritics/deno/index.ts';
+import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@deno/index.ts';
 
 (async () => {
   const str = 'söme stüff with áccènts';

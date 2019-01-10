@@ -1,5 +1,7 @@
 language: minimal
 
+name: deno_testing
+
 os:
   # - osx
   - windows
