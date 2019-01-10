@@ -1,11 +1,11 @@
 language: minimal
 
-name: deno_testing
-
-os:
-  # - osx
-  - windows
-  - linux
+matrix:
+  include:
+    - os: linux
+      name: linux:deno_testing
+    - os: windows
+      name: windows:deno_testing
 
 before_install:
   - export PATH=$HOME/.deno/bin:$PATH
