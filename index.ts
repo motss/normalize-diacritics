@@ -1,6 +1,3 @@
-// @ts-check
-// tslint:disable:max-line-length
-
 export interface Diacritics {
   letter: string;
   diacritics: RegExp;
@@ -10,6 +7,7 @@ export interface Diacritics {
  * NOTE: A more complete list of diacritics are from
  * {@link https://goo.gl/rEBH0E} and {@link https://goo.gl/9Niith}.
  */
+// tslint:disable:max-line-length
 export const diacritics: Diacritics[] = [
   { letter: ' ', diacritics: /[\u00A0]/g },
   { letter: '0', diacritics: /[\u07C0]/g },
@@ -110,35 +108,28 @@ export const diacritics: Diacritics[] = [
   { letter: 'y', diacritics: /[\u0079\u24E8\uFF59\u1EF3\u00FD\u0177\u1EF9\u0233\u1E8F\u00FF\u1EF7\u1E99\u1EF5\u01B4\u024F\u1EFF]/g },
   { letter: 'z', diacritics: /[\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763]/g },
 ];
+// tslint:enable:max-line-length
 
 function replaceDiacritics(inputChar: string) {
-  try {
-    /**
-     * NOTE: Normalizing accents/ diacritics in ES6
-     * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
-     */
-    if (typeof ''.normalize === 'function') {
-      return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    }
-
-    const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
-
-    return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
-  } catch (e) {
-    throw e;
+  /**
+   * NOTE: Normalizing accents/ diacritics in ES6
+   * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
+   */
+  if (typeof ''.normalize === 'function') {
+    return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
+
+  const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
+
+  return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
 }
 
 export function normalizeSync(input: string) {
-  try {
-    if (typeof input !== 'string') {
-      throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
-    }
-
-    return input.length > 1 ? input.replace(/(\S)/g, (_, p) => replaceDiacritics(p)) : input;
-  } catch (e) {
-    throw e;
+  if (typeof input !== 'string') {
+    throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
+
+  return input.length > 1 ? input.replace(/(\S)/g, (_, p) => replaceDiacritics(p)) : input;
 }
 
 export async function normalize(input: string = '') {

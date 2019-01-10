@@ -6,79 +6,40 @@
 
 <hr />
 
-[![Version][version-badge]][version-url]
-[![Node version][node-version-badge]][node-version-url]
+<!-- [![Version][version-badge]][version-url] -->
 [![MIT License][mit-license-badge]][mit-license-url]
 
-[![Downloads][downloads-badge]][downloads-url]
-[![Total downloads][total-downloads-badge]][downloads-url]
-[![Packagephobia][packagephobia-badge]][packagephobia-url]
-[![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
+<!-- [![Downloads][downloads-badge]][downloads-url] -->
+<!-- [![Total downloads][total-downloads-badge]][downloads-url] -->
+<!-- [![Packagephobia][packagephobia-badge]][packagephobia-url] -->
+<!-- [![Bundlephobia][bundlephobia-badge]][bundlephobia-url] -->
 
 [![Build Status][travis-badge]][travis-url]
-[![CircleCI][circleci-badge]][circleci-url]
-[![Dependency Status][daviddm-badge]][daviddm-url]
-[![codecov][codecov-badge]][codecov-url]
-[![Coverage Status][coveralls-badge]][coveralls-url]
+<!-- [![CircleCI][circleci-badge]][circleci-url] -->
+<!-- [![codecov][codecov-badge]][codecov-url] -->
+<!-- [![Coverage Status][coveralls-badge]][coveralls-url] -->
 
-[![codebeat badge][codebeat-badge]][codebeat-url]
-[![Codacy Badge][codacy-badge]][codacy-url]
-[![Code of Conduct][coc-badge]][coc-url]
+<!-- [![codebeat badge][codebeat-badge]][codebeat-url] -->
+<!-- [![Codacy Badge][codacy-badge]][codacy-url] -->
+<!-- [![Code of Conduct][coc-badge]][coc-url] -->
 
-> Simple [NPM][npm-url] package to remove any accents/ diacritics found in a string.
+> Simple [deno][deno-url] library to remove any accents/ diacritics found in a string.
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
-- [Pre-requisite](#pre-requisite)
-- [How to use](#how-to-use)
-  - [Install](#install)
-  - [ES Modules or TypeScript](#es-modules-or-typescript)
-  - [Node.js](#nodejs)
-- [API Reference](#api-reference)
-  - [normalize([input])](#normalizeinput)
-  - [normalizeSync([input])](#normalizesyncinput)
-- [License](#license)
-
 ## Pre-requisite
 
-- [Node.js][node-js-url] >= 8.9.0
-- [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
+- [deno][deno-url] >= 0.2.6
 
-## How to use
-
-### Install
-
-```sh
-# Install via NPM
-$ npm install --save normalize-diacritics
-```
-
-### ES Modules or TypeScript
-
-Snippet for using native ES Modules:
+## Usage
 
 ```ts
-// @ts-check 
-
-import normalize from 'normalize-diacritics';
+import { normalize } from 'https://denopkg.com/motss/normalize-diacritics/deno/index.ts';
 
 (async () => {
   const str = 'söme stüff with áccènts';
 
-  assert.equal(await normalize(str), some stuff with accents); // OK
-})();
-```
-
-### Node.js
-
-```js
-const { normalize } = require('normalize-diacritics');
-
-(async () => {
-  const str = 'söme stüff with áccènts';
-
-  assert.equal(await normalize(str), some stuff with accents); // OK
+  await normalize(str); // 'some stuff with accents'
 })();
 ```
 
@@ -100,9 +61,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [MIT License](http://motss.mit-license.org/) © Rong Sen Ng
 
 <!-- References -->
-[node-js-url]: https://nodejs.org
-[npm-url]: https://www.npmjs.com
-[node-releases-url]: https://nodejs.org/en/download/releases
+[deno-url]: https://github.com/denoland/deno
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map

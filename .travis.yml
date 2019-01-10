@@ -1,13 +1,16 @@
-language: node_js
-dist: trusty
-node_js:
-  - v8
-  - v9
-  - v10
-before_script:
-  - npm install -g npm@latest coveralls codecov --quiet
+language: minimal
+
+os:
+  # - osx
+  - windows
+  - linux
+
+before_install:
+  - export PATH=$HOME/.deno/bin:$PATH
+
+install:
+  - curl -L https://deno.land/x/install/install.py | python
+
 script:
-  - npm cit
-after_success:
-  - 'cat ./coverage/lcov.info | coveralls'
-  - 'cat ./coverage/lcov.info | codecov'
+  - deno -v
+  - deno test/index.spec.ts
