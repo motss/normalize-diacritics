@@ -82,32 +82,32 @@ This methods works the same as `normalize([input])` except that this is the sync
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
 
-[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics
+[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics/deno
 [circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/normalize-diacritics?label=coveralls
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
-[inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=master
+[inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=deno
 [codebeat-badge]: https://codebeat.co/badges/8a0eb7c1-b944-41b1-ad87-5f0bd392873b
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
 [version-url]: https://www.npmjs.com/package/normalize-diacritics
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
+[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/deno/LICENSE
 
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
 [bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
 
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
-[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/master
+[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/deno
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
 [codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
-[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
+[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=deno
 
-[codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
+[codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-deno
 [codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
+[coc-url]: https://github.com/motss/normalize-diacritics/blob/deno/CODE_OF_CONDUCT.md

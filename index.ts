@@ -111,23 +111,6 @@ export const diacritics: Diacritics[] = [
 // tslint:enable:max-line-length
 
 function replaceDiacritics(inputChar: string) {
-  /**
-   * NOTE: Normalizing accents/ diacritics in ES6
-   * @see {@link https://goo.gl/d1K2YV|Remove accents/diacritics in a string in JavaScript - Stack Overflow}
-   */
-  if (typeof ''.normalize === 'function') {
-    return inputChar
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
-      // .split('')
-      // .filter((n) => {
-      //   const nCharCode = n.charCodeAt(0);
-
-      //   return !(nCharCode >= 768 && nCharCode <= 879);
-      // })
-      // .join('');
-  }
-
   const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
 
   return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
