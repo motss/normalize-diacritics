@@ -6,7 +6,16 @@ async function throwsWhenInvalidInput() {
   try {
     await normalize(null);
   } catch (e) {
-    const err = new TypeError(`Expected 'input' to be of type string, but received '${null}'`);
+    const err = new TypeError(`Expected 'input' to be of type string, but received 'null'`);
+    assertEqual(e, err);
+  }
+}
+
+async function throwsWhenInputIsUndefined() {
+  try {
+    await normalize();
+  } catch (e) {
+    const err = new TypeError(`Expected 'input' to be of type string, but received 'undefined'`);
     assertEqual(e, err);
   }
 }
@@ -28,14 +37,6 @@ async function normalizesStrings() {
     assertEqual(await normalize(strs[3]), 'Cote d\'Ivoire');
     assertEqual(await normalize(strs[4]), 'Curacao');
     assertEqual(await normalize(strs[5]), 'Reunion');
-  } catch (e) {
-    throw e;
-  }
-}
-
-async function normalizesStringsWithoutInput() {
-  try {
-    assertEqual(await normalize(), '');
   } catch (e) {
     throw e;
   }
@@ -76,7 +77,7 @@ async function normalizeSingleCharacter() {
 
 Promise.all([
   throwsWhenInvalidInput,
-  normalizesStringsWithoutInput,
+  throwsWhenInputIsUndefined,
   normalizesStringsWithoutUsingNativeFunction,
   returnsOriginalCharacterWhenNoMatchFound,
   normalizeSingleCharacter,

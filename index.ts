@@ -124,7 +124,7 @@ export function normalizeSync(input: string) {
   return !input.length ? input : input.replace(/(\S)/g, (_, p) => replaceDiacritics(p));
 }
 
-export async function normalize(input: string) {
+export async function normalize(input?: string) {
   return normalizeSync(input);
 }
 
