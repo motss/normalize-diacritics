@@ -70,14 +70,12 @@ $ npm install --save normalize-diacritics
 Snippet for using native ES Modules:
 
 ```ts
-// @ts-check 
-
 import normalize from 'normalize-diacritics';
 
 (async () => {
   const str = 'söme stüff with áccènts';
 
-  assert.equal(await normalize(str), some stuff with accents); // OK
+  assert.equal(await normalize(str), 'some stuff with accents'); // OK
 })();
 ```
 
@@ -89,7 +87,7 @@ const { normalize } = require('normalize-diacritics');
 (async () => {
   const str = 'söme stüff with áccènts';
 
-  assert.equal(await normalize(str), some stuff with accents); // OK
+  assert.equal(await normalize(str), 'some stuff with accents'); // OK
 })();
 ```
 
@@ -97,14 +95,14 @@ const { normalize } = require('normalize-diacritics');
 
 ### normalize(input)
 
-- `input` <[?string][string-mdn-url]> Input string that contains accents/ diacritics.
+- `input` <[?string][string-mdn-url]> Optional input string that contains accents/ diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
 
 ### normalizeSync(input)
 
-This methods works the same as `normalize([input])` except that this is the synchronous version.
+This methods works the same as `normalize(input)` except that this is the synchronous version.
 
 ## License
 
