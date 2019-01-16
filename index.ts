@@ -121,10 +121,10 @@ export function normalizeSync(input: string) {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
 
-  return input.length > 1 ? input.replace(/(\S)/g, (_, p) => replaceDiacritics(p)) : input;
+  return !input.length ? input : input.replace(/(\S)/g, (_, p) => replaceDiacritics(p));
 }
 
-export async function normalize(input: string = '') {
+export async function normalize(input: string) {
   return normalizeSync(input);
 }
 

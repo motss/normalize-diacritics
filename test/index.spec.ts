@@ -70,11 +70,16 @@ async function returnsOriginalCharacterWhenNoMatchFound() {
   }
 }
 
+async function normalizeSingleCharacter() {
+  assertEqual(await normalize('ô'), 'o');
+}
+
 Promise.all([
   throwsWhenInvalidInput,
   normalizesStringsWithoutInput,
   normalizesStringsWithoutUsingNativeFunction,
   returnsOriginalCharacterWhenNoMatchFound,
+  normalizeSingleCharacter,
 ].map(n => test(n)));
 
 /**
