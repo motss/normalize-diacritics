@@ -6,7 +6,8 @@
 
 <hr />
 
-<!-- [![Version][version-badge]][version-url] -->
+[![Version][version-badge]][version-url]
+[![Deno Version][deno-version-badge]][deno-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
 
 <!-- [![Downloads][downloads-badge]][downloads-url] -->
@@ -34,7 +35,7 @@
 ## Usage
 
 ```ts
-import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@deno/index.ts';
+import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@v1.0.0-deno/index.ts';
 
 (async () => {
   const str = 'söme stüff with áccènts';
@@ -73,8 +74,8 @@ This methods works the same as `normalize([input])` except that this is the sync
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 <!-- Badges -->
-[version-badge]: https://flat.badgen.net/npm/v/normalize-diacritics
-[node-version-badge]: https://flat.badgen.net/npm/node/normalize-diacritics
+[version-badge]: https://flat.badgen.net/badge/version/v1.0.0-deno/blue?icon=github
+[deno-version-badge]: https://flat.badgen.net/badge/deno/v0.2.6/blue?icon=github
 [mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
 [downloads-badge]: https://flat.badgen.net/npm/dm/normalize-diacritics
@@ -94,8 +95,8 @@ This methods works the same as `normalize([input])` except that this is the sync
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
-[version-url]: https://www.npmjs.com/package/normalize-diacritics
-[node-version-url]: https://nodejs.org/en/download
+[version-url]: https://github.com/motss/normalize-diacritics/tree/deno
+[deno-version-url]: https://github.com/denoland/deno
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/deno/LICENSE
 
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
