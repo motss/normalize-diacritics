@@ -36,8 +36,8 @@
   - [ES Modules or TypeScript](#es-modules-or-typescript)
   - [Node.js](#nodejs)
 - [API Reference](#api-reference)
-  - [normalize([input])](#normalizeinput)
-  - [normalizeSync([input])](#normalizesyncinput)
+  - [normalize(input)](#normalizeinput)
+  - [normalizeSync(input)](#normalizesyncinput)
 - [License](#license)
 
 ## Pre-requisite
@@ -84,14 +84,14 @@ const { normalize } = require('normalize-diacritics');
 
 ## API Reference
 
-### normalize([input])
+### normalize(input)
 
 - `input` <[?string][string-mdn-url]> Input string that contains accents/ diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
 
-### normalizeSync([input])
+### normalizeSync(input)
 
 This methods works the same as `normalize([input])` except that this is the synchronous version.
 
@@ -123,8 +123,8 @@ This methods works the same as `normalize([input])` except that this is the sync
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
 
-[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics
+[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics/master
+[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics/master
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov
 [coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/normalize-diacritics?label=coveralls

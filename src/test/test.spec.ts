@@ -1,5 +1,3 @@
-// @ts-check
-
 import { normalize } from '../';
 
 describe('normalize-diacritics', () => {
@@ -9,7 +7,7 @@ describe('normalize-diacritics', () => {
         await normalize(null);
       } catch (e) {
         expect(e).toStrictEqual(
-          new TypeError(`Expected 'input' to be of type string, but received '${null}'`));
+          new TypeError(`Expected 'input' to be of type string, but received 'null'`));
       }
     });
 
@@ -23,6 +21,15 @@ describe('normalize-diacritics', () => {
         expect(e).toStrictEqual(new Error('String#normalize is broken'));
       } finally {
         String.prototype.normalize = cachedFn;
+      }
+    });
+
+    it(`throws when 'input' is 'undefined'`, async () => {
+      try {
+        await normalize();
+      } catch (e) {
+        expect(e).toStrictEqual(
+          new TypeError(`Expected 'input' to be of type string, but received 'undefined'`));
       }
     });
 
@@ -46,14 +53,6 @@ describe('normalize-diacritics', () => {
         expect(await normalize(strs[3])).toStrictEqual('Cote d\'Ivoire');
         expect(await normalize(strs[4])).toStrictEqual('Curacao');
         expect(await normalize(strs[5])).toStrictEqual('Reunion');
-      } catch (e) {
-        throw e;
-      }
-    });
-
-    it('normalizes strings without input', async () => {
-      try {
-        expect(await normalize()).toStrictEqual('');
       } catch (e) {
         throw e;
       }
@@ -85,6 +84,14 @@ describe('normalize-diacritics', () => {
       } finally {
         Array.prototype.filter = cachedFilter;
         String.prototype.normalize = cachedFn;
+      }
+    });
+
+    it('normalizes single-character string', async () => {
+      try {
+        expect(await normalize('ô')).toStrictEqual('o');
+      } catch (e) {
+        throw e;
       }
     });
 
