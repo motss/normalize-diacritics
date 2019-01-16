@@ -60,7 +60,7 @@ describe('normalize-diacritics', () => {
 
     it('normalizes string without using native function', async () => {
       const cachedFn = String.prototype.normalize;
-      String.prototype.normalize = null;
+      String.prototype.normalize = null!;
 
       try {
         expect(await normalize('Réunion')).toStrictEqual('Reunion');
@@ -75,7 +75,7 @@ describe('normalize-diacritics', () => {
       const cachedFilter = Array.prototype.filter;
       const cachedFn = String.prototype.normalize;
       Array.prototype.filter = () => [];
-      String.prototype.normalize = null;
+      String.prototype.normalize = null!;
 
       try {
         expect(await normalize('Réunion')).toStrictEqual('Réunion');
@@ -90,6 +90,14 @@ describe('normalize-diacritics', () => {
     it('normalizes single-character string', async () => {
       try {
         expect(await normalize('ô')).toStrictEqual('o');
+      } catch (e) {
+        throw e;
+      }
+    });
+
+    it('returns empty string untouched', async () => {
+      try {
+        expect(await normalize('')).toStrictEqual('');
       } catch (e) {
         throw e;
       }

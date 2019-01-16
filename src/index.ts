@@ -129,19 +129,19 @@ function replaceDiacritics(inputChar: string) {
   }
 }
 
-export function normalizeSync(input?: string) {
+export function normalizeSync(input?: string | null) {
   try {
     if (typeof input !== 'string') {
       throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
     }
 
-    return !input.length ? input : input.replace(/(\S)/g, (_, p) => replaceDiacritics(p));
+    return !input.length ? input : input.replace(/(\S)/g, (_, p: string) => replaceDiacritics(p));
   } catch (e) {
     throw e;
   }
 }
 
-export async function normalize(input?: string) {
+export async function normalize(input?: string | null) {
   return normalizeSync(input);
 }
 

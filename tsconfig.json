@@ -15,17 +15,25 @@
     "strictNullChecks": true,
     "traceResolution": false,
 
-    "lib": ["esnext", "esnext.array", "esnext.asynciterable"],
+    "lib": [
+      "esnext",
+      "esnext.array",
+      "esnext.asynciterable",
+      "esnext.intl",
+      "esnext.symbol"
+    ],
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "esnext",
-    "jsx": "react",
-    "jsxFactory": "h",
     "rootDir": "src",
     "outDir": "dist",
     "declaration": true,
-    "declarationDir": "dist"
+    "declarationDir": "dist",
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/test*/**/*", "src/demo*/**/*"]
+  "exclude": [
+    "node_modules",
+    "src/test*/**/*",
+    "src/demo*/**/*"
+  ]
 }

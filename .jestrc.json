@@ -6,7 +6,7 @@
           ["env", {
             "targets": { "node": "current" },
             "spec": true,
-            "modules": false,
+            "modules": "commonjs",
             "useBuiltIns": true
           }]
         ],
