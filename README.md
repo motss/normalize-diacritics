@@ -32,6 +32,7 @@
 - [Table of contents](#table-of-contents)
 - [Pre-requisite](#pre-requisite)
 - [How to use](#how-to-use)
+  - [Multiple bundles](#multiple-bundles)
   - [Install](#install)
   - [ES Modules or TypeScript](#es-modules-or-typescript)
   - [Node.js](#nodejs)
@@ -46,6 +47,16 @@
 - [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
 
 ## How to use
+
+### Multiple bundles
+
+There are 3 different bundles for different use cases:
+
+1. `esm` - Targeting native ES modules such as ES2015+ and [TypeScript][typescript-url].
+2. `cjs` - Targeting [Node.js][node-js-url] with `CommonJS`.
+3. `iife` - Targeting older browsers by compiling to `IIFE` and `ES5`.
+
+Alternatively, you can also rely on third party services to grab the bundle such as [unpkg][unpkg-url] or [jsdelivr][jsdelivr-url].
 
 ### Install
 
@@ -103,6 +114,9 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-js-url]: https://nodejs.org
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
+[typescript-url]: https://github.com/Microsoft/TypeScript
+[unpkg-url]: https://unpkg.com
+[jsdelivr-url]: https://www.jsdelivr.com/
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
