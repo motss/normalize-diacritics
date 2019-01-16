@@ -37,8 +37,8 @@
   - [ES Modules or TypeScript](#es-modules-or-typescript)
   - [Node.js](#nodejs)
 - [API Reference](#api-reference)
-  - [normalize(input)](#normalizeinput)
-  - [normalizeSync(input)](#normalizesyncinput)
+  - [normalize([input])](#normalizeinput)
+  - [normalizeSync([input])](#normalizesyncinput)
 - [License](#license)
 
 ## Pre-requisite
@@ -82,7 +82,7 @@ import normalize from 'normalize-diacritics';
 ### Node.js
 
 ```js
-const { normalize } = require('normalize-diacritics');
+const { normalize } = require('normalize-diacritics/dist/index.cjs.js');
 
 (async () => {
   const str = 'söme stüff with áccènts';
@@ -93,16 +93,16 @@ const { normalize } = require('normalize-diacritics');
 
 ## API Reference
 
-### normalize(input)
+### normalize([input])
 
 - `input` <[?string][string-mdn-url]> Optional input string that contains accents/ diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
 
-### normalizeSync(input)
+### normalizeSync([input])
 
-This methods works the same as `normalize(input)` except that this is the synchronous version.
+This methods works the same as `normalize([input])` except that this is the synchronous version.
 
 ## License
 
