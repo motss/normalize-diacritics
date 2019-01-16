@@ -44,7 +44,7 @@ async function normalizesStrings() {
 
 async function normalizesStringsWithoutUsingNativeFunction() {
   const cachedFn = String.prototype.normalize;
-  String.prototype.normalize = null;
+  String.prototype.normalize = null!;
 
   try {
     assertEqual(await normalize('Réunion'), 'Reunion');
@@ -59,7 +59,7 @@ async function returnsOriginalCharacterWhenNoMatchFound() {
   const cachedFilter = Array.prototype.filter;
   const cachedFn = String.prototype.normalize;
   Array.prototype.filter = () => [];
-  String.prototype.normalize = null;
+  String.prototype.normalize = null!;
 
   try {
     assertEqual(await normalize('Réunion'), 'Réunion');
@@ -75,12 +75,17 @@ async function normalizeSingleCharacter() {
   assertEqual(await normalize('ô'), 'o');
 }
 
+async function returnsEmptyStringUnTouched() {
+  assertEqual(await normalize(''), '');
+}
+
 Promise.all([
   throwsWhenInvalidInput,
   throwsWhenInputIsUndefined,
   normalizesStringsWithoutUsingNativeFunction,
   returnsOriginalCharacterWhenNoMatchFound,
   normalizeSingleCharacter,
+  returnsEmptyStringUnTouched,
 ].map(n => test(n)));
 
 /**

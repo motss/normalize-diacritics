@@ -116,12 +116,12 @@ function replaceDiacritics(inputChar: string) {
   return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
 }
 
-export function normalizeSync(input: string) {
+export function normalizeSync(input?: string) {
   if (typeof input !== 'string') {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
 
-  return !input.length ? input : input.replace(/(\S)/g, (_, p) => replaceDiacritics(p));
+  return !input.length ? input : input.replace(/(\S)/g, (_, p: string) => replaceDiacritics(p));
 }
 
 export async function normalize(input?: string) {
