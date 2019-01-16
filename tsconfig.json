@@ -18,7 +18,7 @@
     "lib": ["esnext", "esnext.array", "esnext.asynciterable"],
     "moduleResolution": "node",
     "module": "commonjs",
-    "target": "esnext",
+    "target": "es5",
     "jsx": "react",
     "jsxFactory": "h",
     "rootDir": "src",
