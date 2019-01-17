@@ -10,6 +10,7 @@
 [![Node version][node-version-badge]][node-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
 
+[![jsDelivr downloads][jsdelivr-badge]][jsdelivr-url]
 [![Downloads][downloads-badge]][downloads-url]
 [![Total downloads][total-downloads-badge]][downloads-url]
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
@@ -34,6 +35,9 @@
 - [How to use](#how-to-use)
   - [Multiple bundles](#multiple-bundles)
   - [Install](#install)
+    - [NPM](#npm)
+    - [unpkg](#unpkg)
+    - [jsDelivr](#jsdelivr)
   - [ES Modules or TypeScript](#es-modules-or-typescript)
   - [Node.js](#nodejs)
 - [API Reference](#api-reference)
@@ -53,17 +57,66 @@
 There are 3 different bundles for different use cases:
 
 1. `esm` - Targeting native ES modules such as ES2015+ and [TypeScript][typescript-url].
+
+    ```ts
+    import { normalize } from 'normalize-diacritics';
+    /** import { normalizeSync } from 'normalize-diacritics'; */
+    ...
+    ```
+
 2. `cjs` - Targeting [Node.js][node-js-url] with `CommonJS`.
+
+    ```ts
+    const { normalize } = require('normalize-diacritics/dist/index.cjs.js');
+    /** const { normalizeSync } = require('normalize-diacritics/dist/index.cjs.js'); */
+    ...
+    ```
+
 3. `iife` - Targeting older browsers by compiling to `IIFE` and `ES5`.
 
-Alternatively, you can also rely on third party services to grab the bundle such as [unpkg][unpkg-url] or [jsdelivr][jsdelivr-url].
+    ```html
+    <!--
+      Say, you are using IIFE bundle on browsers such as IE11 by loading it via `unpkg` or `jsDelivr`.
+    -->
+    ...
+    <head>
+      <script src="https://unpkg.com/normalize-diacritics@latest/dist/index.iife.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/normalize-diacritics@latest/dist/index.iife.min.js"></script> -->
+    </head>
+    ...
+    <script>
+      const { normalize } = window.NormalizeDiacritics;
+      /** const { normalizeSync } = window.NormalizeDiacritics; */
+    </script>
+    ...
+    ```
+
+Alternatively, you can also rely on third party services to grab the bundle such as [unpkg][unpkg-url] or [jsDelivr][jsdelivr-url].
 
 ### Install
+
+#### NPM
 
 ```sh
 # Install via NPM
 $ npm install --save normalize-diacritics
 ```
+
+#### unpkg
+
+For more info, see [unpkg.com/normalize-diacritics][unpkg-com-normalize-diacritics-url].
+
+- `esm` https://unpkg.com/normalize-diacritics@latest/dist/index.js
+- `cjs` https://unpkg.com/normalize-diacritics@latest/dist/index.cjs.js
+- `iife` https://unpkg.com/normalize-diacritics@latest/dist/index.iife.js
+
+#### jsDelivr
+
+For more info, see [jsdelivr.com/package/npm/normalize-diacritics][jsdelivr-com-package-npm-normalize-diacritics-url].
+
+- `esm` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.js
+- `cjs` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.cjs.js
+- `iife` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.iife.js
 
 ### ES Modules or TypeScript
 
@@ -114,7 +167,9 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-releases-url]: https://nodejs.org/en/download/releases
 [typescript-url]: https://github.com/Microsoft/TypeScript
 [unpkg-url]: https://unpkg.com
-[jsdelivr-url]: https://www.jsdelivr.com/
+[jsdelivr-url]: https://www.jsdelivr.com
+[unpkg-com-normalize-diacritics-url]: https://unpkg.com/normalize-diacritics@1.0.0/dist/
+[jsdelivr-com-package-npm-normalize-diacritics-url]: https://www.jsdelivr.com/package/npm/normalize-diacritics?version=1.0.0
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
@@ -130,6 +185,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-version-badge]: https://flat.badgen.net/npm/node/normalize-diacritics
 [mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/normalize-diacritics/badge
 [downloads-badge]: https://flat.badgen.net/npm/dm/normalize-diacritics
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/normalize-diacritics?label=total%20downloads
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
@@ -151,6 +207,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
 
+[jsdelivr-url]: https://www.jsdelivr.com/package/npm/normalize-diacritics
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
 [bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
