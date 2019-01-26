@@ -10,19 +10,9 @@
 [![Deno Version][deno-version-badge]][deno-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
 
-<!-- [![Downloads][downloads-badge]][downloads-url] -->
-<!-- [![Total downloads][total-downloads-badge]][downloads-url] -->
-<!-- [![Packagephobia][packagephobia-badge]][packagephobia-url] -->
-<!-- [![Bundlephobia][bundlephobia-badge]][bundlephobia-url] -->
+[![jsDelivr downloads][jsdelivr-badge]][jsdelivr-url]
 
 [![Build Status][travis-badge]][travis-url]
-<!-- [![CircleCI][circleci-badge]][circleci-url] -->
-<!-- [![codecov][codecov-badge]][codecov-url] -->
-<!-- [![Coverage Status][coveralls-badge]][coveralls-url] -->
-
-<!-- [![codebeat badge][codebeat-badge]][codebeat-url] -->
-<!-- [![Codacy Badge][codacy-badge]][codacy-url] -->
-<!-- [![Code of Conduct][coc-badge]][coc-url] -->
 
 > Simple [deno][deno-url] library to remove any accents/ diacritics found in a string.
 
@@ -35,7 +25,10 @@
 ## Usage
 
 ```ts
+/** Import from GH via `denopkg` */
 import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@v1.0.1-deno/index.ts';
+/** Or, import from a CDN such as `jsdelivr` */
+// import { normalize } from 'https://cdn.jsdelivr.net/gh/motss/normalize-diacritics@1.0.1-deno/index.ts';
 
 (async () => {
   const str = 'söme stüff with áccènts';
@@ -48,7 +41,7 @@ import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@v1.0.1
 
 ### normalize([input])
 
-- `input` <[?string][string-mdn-url]> Optional input string that contains accents/ diacritics.
+- `input` <?[string][string-mdn-url]> Optional input string that contains accents/ diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
@@ -78,37 +71,15 @@ This methods works the same as `normalize([input])` except that this is the sync
 [deno-version-badge]: https://flat.badgen.net/badge/deno/v0.2.6/blue?icon=github
 [mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
-[downloads-badge]: https://flat.badgen.net/npm/dm/normalize-diacritics
-[total-downloads-badge]: https://flat.badgen.net/npm/dt/normalize-diacritics?label=total%20downloads
-[packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
-[bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/gh/motss/normalize-diacritics/badge
 
 [travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics/deno
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics
-[daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
-[codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov
-[coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/normalize-diacritics?label=coveralls
-
-[codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
-[inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=deno
-[codebeat-badge]: https://codebeat.co/badges/8a0eb7c1-b944-41b1-ad87-5f0bd392873b
-[coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
 [version-url]: https://github.com/motss/normalize-diacritics/tree/deno
 [deno-version-url]: https://github.com/denoland/deno
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/deno/LICENSE
 
-[downloads-url]: http://www.npmtrends.com/normalize-diacritics
-[packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
-[bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
+[jsdelivr-url]: https://www.jsdelivr.com/package/gh/motss/normalize-diacritics?version=1.0.1-deno
 
 [travis-url]: https://travis-ci.org/motss/normalize-diacritics
-[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/deno
-[daviddm-url]: https://david-dm.org/motss/normalize-diacritics
-[codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
-[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=deno
-
-[codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-deno
-[codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/normalize-diacritics/blob/deno/CODE_OF_CONDUCT.md
