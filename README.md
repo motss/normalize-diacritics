@@ -30,20 +30,21 @@
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
+<!-- TOC -->
+
 - [Pre-requisite](#pre-requisite)
 - [How to use](#how-to-use)
   - [Multiple bundles](#multiple-bundles)
-  - [Install](#install)
-    - [NPM](#npm)
-    - [unpkg](#unpkg)
-    - [jsDelivr](#jsdelivr)
-  - [ES Modules or TypeScript](#es-modules-or-typescript)
+  - [NPM](#npm)
+    - [Install](#install)
   - [Node.js](#nodejs)
+  - [ES Modules or TypeScript](#es-modules-or-typescript)
 - [API Reference](#api-reference)
   - [normalize([input])](#normalizeinput)
   - [normalizeSync([input])](#normalizesyncinput)
 - [License](#license)
+
+<!-- /TOC -->
 
 ## Pre-requisite
 
@@ -91,45 +92,28 @@ There are 3 different bundles for different use cases:
     ...
     ```
 
-Alternatively, you can also rely on third party services to grab the bundle such as [unpkg][unpkg-url] or [jsDelivr][jsdelivr-url].
 
-### Install
+You can already grab the bundle from such as the follwoing awesome CDNs:
 
-#### NPM
+1. [unpkg][unpkg-url]
+
+    - `esm` https://unpkg.com/normalize-diacritics@latest/dist/index.js
+    - `cjs` https://unpkg.com/normalize-diacritics@latest/dist/index.cjs.js
+    - `iife` https://unpkg.com/normalize-diacritics@latest/dist/index.iife.js
+
+2. [jsdelivr][jsdelivr-url]
+
+    - `esm` https://cdn.jsdelivr.net/npm/normalize-diacritics@latest/dist/index.js
+    - `cjs` https://cdn.jsdelivr.net/npm/normalize-diacritics@latest/dist/index.cjs.js
+    - `iife` https://cdn.jsdelivr.net/npm/normalize-diacritics@latest/dist/index.iife.js
+
+### NPM
+
+#### Install
 
 ```sh
 # Install via NPM
 $ npm install --save normalize-diacritics
-```
-
-#### unpkg
-
-For more info, see [unpkg.com/normalize-diacritics][unpkg-com-normalize-diacritics-url].
-
-- `esm` https://unpkg.com/normalize-diacritics@latest/dist/index.js
-- `cjs` https://unpkg.com/normalize-diacritics@latest/dist/index.cjs.js
-- `iife` https://unpkg.com/normalize-diacritics@latest/dist/index.iife.js
-
-#### jsDelivr
-
-For more info, see [jsdelivr.com/package/npm/normalize-diacritics][jsdelivr-com-package-npm-normalize-diacritics-url].
-
-- `esm` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.js
-- `cjs` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.cjs.js
-- `iife` https://cdn.jsdelivr.net/npm/normalize-diacritics@1.0.0/dist/index.iife.js
-
-### ES Modules or TypeScript
-
-Snippet for using native ES Modules:
-
-```ts
-import normalize from 'normalize-diacritics';
-
-(async () => {
-  const str = 'söme stüff with áccènts';
-
-  assert.equal(await normalize(str), 'some stuff with accents'); // OK
-})();
 ```
 
 ### Node.js
@@ -144,11 +128,23 @@ const { normalize } = require('normalize-diacritics/dist/index.cjs.js');
 })();
 ```
 
+### ES Modules or TypeScript
+
+```ts
+import normalize from 'normalize-diacritics';
+
+(async () => {
+  const str = 'söme stüff with áccènts';
+
+  assert.equal(await normalize(str), 'some stuff with accents'); // OK
+})();
+```
+
 ## API Reference
 
 ### normalize([input])
 
-- `input` <[?string][string-mdn-url]> Optional input string that contains accents/ diacritics.
+- `input` <?[string][string-mdn-url]> Optional input string that contains accents/ diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
@@ -166,10 +162,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [npm-url]: https://www.npmjs.com
 [node-releases-url]: https://nodejs.org/en/download/releases
 [typescript-url]: https://github.com/Microsoft/TypeScript
-[unpkg-url]: https://unpkg.com
-[jsdelivr-url]: https://www.jsdelivr.com
-[unpkg-com-normalize-diacritics-url]: https://unpkg.com/normalize-diacritics@1.0.0/dist/
-[jsdelivr-com-package-npm-normalize-diacritics-url]: https://www.jsdelivr.com/package/npm/normalize-diacritics?version=1.0.0
+[unpkg-url]: https://unpkg.com/normalize-diacritics@latest/dist/
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
@@ -185,7 +178,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-version-badge]: https://flat.badgen.net/npm/node/normalize-diacritics
 [mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/normalize-diacritics/badge
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/normalize-diacritics/badge?version=latest
 [downloads-badge]: https://flat.badgen.net/npm/dm/normalize-diacritics
 [total-downloads-badge]: https://flat.badgen.net/npm/dt/normalize-diacritics?label=total%20downloads
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
@@ -207,7 +200,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-version-url]: https://nodejs.org/en/download
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
 
-[jsdelivr-url]: https://www.jsdelivr.com/package/npm/normalize-diacritics
+[jsdelivr-url]: https://www.jsdelivr.com/package/npm/normalize-diacritics?version=1.0.1
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
 [bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics

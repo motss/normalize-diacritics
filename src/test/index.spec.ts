@@ -1,4 +1,4 @@
-import { normalize } from '../';
+import { normalize } from '..';
 
 describe('normalize-diacritics', () => {
   describe('error', () => {

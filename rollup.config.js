@@ -3,7 +3,7 @@
 import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
 import tslint from 'rollup-plugin-tslint';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 
 const isProd = !process.env.ROLLUP_WATCH;
 const input = ['src/index.ts'];

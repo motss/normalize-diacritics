@@ -25,28 +25,28 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist/ && npm run rollup",
+    "jest": "jest --config ./.jestrc.json",
     "lint": "tslint --project tsconfig.json --config tslint.prod.json --format stylish 'src/**/*.ts*'",
     "lint:debug": "tslint --project tsconfig.json --config tslint.json --format stylish 'src/**/*.ts*'",
     "prepublishOnly": "npm run build",
     "rollup": "rollup -c ./rollup.config.js",
-    "test": "jest --config ./.jestrc.json",
+    "test": "npm run lint && rm -rf dist/ && npm run ts && npm run jest",
+    "ts": "tsc -p ./tsconfig.test.json",
     "watch": "npm run rollup -- --watch"
   },
   "dependencies": {},
   "devDependencies": {
     "@messageflow/tslint-config": "^1.3.0",
-    "@types/jest": "^23.3.12",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@types/jest": "^23.3.13",
     "jest": "^23.6.0",
-    "rollup": "^1.1.0",
-    "rollup-plugin-filesize": "^6.0.0",
-    "rollup-plugin-terser": "^4.0.2",
+    "rollup": "^1.1.2",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-terser": "^4.0.3",
     "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-typescript2": "^0.19.2",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.4"
   },
   "engines": {
     "node": ">= 8.9.0",
