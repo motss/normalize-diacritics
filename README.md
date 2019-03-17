@@ -97,7 +97,7 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 ```html
 <script src="https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.iife.js"></script>
 <script>
-  const { utcDate } = window.UTCDate;
+  const { normalize } = window.NormalizeDiacritics;
 
   /** Assuming top-level await is enabled... */
   normalize('söme stüff with áccènts')
