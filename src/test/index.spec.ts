@@ -13,7 +13,7 @@ describe('normalize-diacritics', () => {
 
     it(`throws error in 'replaceDiacritics'`, async () => {
       const cachedFn = String.prototype.normalize;
-      String.prototype.normalize = () => { throw new Error('String#normalize is broken'); }
+      String.prototype.normalize = () => { throw new Error('String#normalize is broken'); };
 
       try {
         await normalize('Réunion');
