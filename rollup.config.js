@@ -6,31 +6,41 @@ import tslint from 'rollup-plugin-tslint';
 import typescript from 'rollup-plugin-typescript2';
 
 const isProd = !process.env.ROLLUP_WATCH;
-const input = ['src/index.ts'];
-const pluginFn = (isIife = false) => [
+const pluginFn = (iife) => [
   isProd && tslint({
     throwError: true,
     configuration: `tslint${isProd ? '.prod' : ''}.json`,
   }),
-  typescript({ tsconfig: `./tsconfig${isIife ? '.iife' : ''}.json` }),
+  typescript({
+    tsconfig: `./tsconfig${iife ? '.iife' : ''}.json`,
+    exclude: isProd ? ['src/(demo|test)/**/*'] : [],
+  }),
   isProd && terser(),
   isProd && filesize({ showBrotliSize: true }),
 ];
 
 const multiBuild = [
   {
-    file: 'dist/index.js',
+    input: ['src/index.ts'],
+    file: 'dist/index.mjs',
     format: 'esm',
   },
   {
-    file: 'dist/index.cjs.js',
+    input: ['src/index.ts'],
+    file: 'dist/index.js',
     format: 'cjs',
   },
   {
-    file: 'dist/index.iife.js',
-    format: 'iife',
-    name: 'NormalizeDiacritics',
+    input: ['src/index.ts'],
+    file: 'dist/normalize-diacritics.js',
+    format: 'esm',
   },
-].map(n => ({ input, output: n, plugins: pluginFn(n.format === 'iife') }));
+  {
+    input: ['src/index.ts'],
+    file: 'dist/normalize-diacritics.iife.js',
+    name: 'NormalizeDiacritics',
+    format: 'iife',
+  }
+].map(({ input, ...n }) => ({ input, output: n, plugins: pluginFn('iife' === n.format) }));
 
 export default multiBuild;

@@ -3,11 +3,18 @@ dist: trusty
 node_js:
   - v8
   - v10
-  - v11
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm i -g npm@latest
+install:
+  - npm ci --quiet
 before_script:
-  - npm install -g npm@latest coveralls codecov --quiet
+  - npm install -g coveralls codecov --quiet
 script:
-  - npm cit
+  - npm run lint
+  - npm t
 after_success:
   - 'cat ./coverage/lcov.info | coveralls'
   - 'cat ./coverage/lcov.info | codecov'
