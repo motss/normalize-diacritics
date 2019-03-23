@@ -17,7 +17,6 @@
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
-[![Build Status][travis-badge]][travis-url]
 [![CircleCI][circleci-badge]][circleci-url]
 [![Dependency Status][daviddm-badge]][daviddm-url]
 [![codecov][codecov-badge]][codecov-url]
@@ -151,7 +150,6 @@ This methods works the same as `normalize([input])` except that this is the sync
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
 
-[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics/master?icon=travis
 [circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics/master?icon=circleci
 [daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov&icon=codecov
@@ -173,7 +171,6 @@ This methods works the same as `normalize([input])` except that this is the sync
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
 [bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
 
-[travis-url]: https://travis-ci.org/motss/normalize-diacritics
 [circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/master
 [daviddm-url]: https://david-dm.org/motss/normalize-diacritics
 [codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
