@@ -10,13 +10,18 @@
 [![Deno Version][deno-version-badge]][deno-version-url]
 [![MIT License][mit-license-badge]][mit-license-url]
 
-[![jsDelivr downloads][jsdelivr-badge]][jsdelivr-url]
+[![CircleCI][circleci-badge]][circleci-url]
 
-[![Build Status][travis-badge]][travis-url]
+> Simple [deno][deno-url] module to remove any accents/ diacritics found in a string.
 
-> Simple [deno][deno-url] library to remove any accents/ diacritics found in a string.
+## Table of contents <!-- omit in toc -->
 
-## Table of contents
+- [Pre-requisite](#pre-requisite)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+  - [normalize([input])](#normalizeinput)
+  - [normalizeSync([input])](#normalizesyncinput)
+- [License](#license)
 
 ## Pre-requisite
 
@@ -26,12 +31,10 @@
 
 ```ts
 /** Import from GH via `denopkg` */
-import { normalize } from 'https://denopkg.com/motss/normalize-diacritics@v1.0.1-deno/index.ts';
-/** Or, import from a CDN such as `jsdelivr` */
-// import { normalize } from 'https://cdn.jsdelivr.net/gh/motss/normalize-diacritics@1.0.1-deno/index.ts';
+import { normalize } from "https://denopkg.com/motss/normalize-diacritics@deno/mod.ts";
 
 (async () => {
-  const str = 'söme stüff with áccènts';
+  const str = "söme stüff with áccènts";
 
   await normalize(str); // 'some stuff with accents'
 })();
@@ -67,19 +70,15 @@ This methods works the same as `normalize([input])` except that this is the sync
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 <!-- Badges -->
-[version-badge]: https://flat.badgen.net/badge/version/v1.0.1-deno/blue?icon=github
-[deno-version-badge]: https://flat.badgen.net/badge/deno/v0.2.6/blue?icon=github
+[version-badge]: https://flat.badgen.net/badge/branch/deno/blue?icon=github
+[deno-version-badge]: https://flat.badgen.net/github/release/denoland/deno/stable?icon=github
 [mit-license-badge]: https://flat.badgen.net/npm/license/normalize-diacritics
 
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/gh/motss/normalize-diacritics/badge
-
-[travis-badge]: https://flat.badgen.net/travis/motss/normalize-diacritics/deno
+[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics/deno?icon=circleci
 
 <!-- Links -->
 [version-url]: https://github.com/motss/normalize-diacritics/tree/deno
 [deno-version-url]: https://github.com/denoland/deno
 [mit-license-url]: https://github.com/motss/normalize-diacritics/blob/deno/LICENSE
 
-[jsdelivr-url]: https://www.jsdelivr.com/package/gh/motss/normalize-diacritics?version=1.0.1-deno
-
-[travis-url]: https://travis-ci.org/motss/normalize-diacritics
+[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/deno

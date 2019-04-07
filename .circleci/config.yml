@@ -1,0 +1,31 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+
+defaults: &defaults
+  working_directory: ~/normalize-diacritics
+  docker:
+    - image: circleci/python:2-node
+
+jobs:
+  test:
+    steps:
+      - checkout
+      - run:
+          name: Install Deno
+          command: |
+            - curl -fsSL https://deno.land/x/install/install.sh | sh
+            - export PATH=$HOME/.deno/bin:$PATH
+      - run:
+          name: Versions
+          command: deno -v && which deno && pwd
+      - run:
+          name: Test
+          command: deno ./mod_test.ts
+
+workflows:
+  version: 2
+  jobs:
+    - test
