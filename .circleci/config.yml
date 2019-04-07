@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
 
 defaults: &defaults
   working_directory: ~/normalize-diacritics
@@ -11,21 +11,29 @@ defaults: &defaults
 
 jobs:
   test:
+    <<: *defaults
     steps:
       - checkout
       - run:
           name: Install Deno
+          command: curl -fsSL https://deno.land/x/install/install.sh | sh
+      - run:
+          name: Add Deno To PATH
           command: |
-            - curl -fsSL https://deno.land/x/install/install.sh | sh
-            - export PATH=$HOME/.deno/bin:$PATH
+            echo $BASH_ENV
+            echo 'export PATH="$HOME/.deno/bin:$PATH"' >> $BASH_ENV
+            source $BASH_ENV
       - run:
           name: Versions
-          command: deno -v && which deno && pwd
+          command: |
+            pwd
+            deno -v
       - run:
           name: Test
           command: deno ./mod_test.ts
 
 workflows:
   version: 2
-  jobs:
-    - test
+  deno-test:
+    jobs:
+      - test
