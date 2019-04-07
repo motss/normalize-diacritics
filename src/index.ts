@@ -111,22 +111,17 @@ export const diacritics: Diacritics[] = [
 ];
 // tslint:enable:max-line-length
 
-function replaceDiacritics(inputChar: string) {
-  try {
-    /**
-     * NOTE: Normalizing accents/ diacritics in ES6.
-     * See https://bit.ly/2Cncgor for more info.
-     */
-    if ('function' === typeof(''.normalize)) {
-      return inputChar.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    }
+function nativeStringNormalize(s: string) {
+  /**
+   * NOTE: Normalizing accents/ diacritics in ES6.
+   * See https://bit.ly/2Cncgor for more info.
+   */
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
-    const normalized = diacritics.filter(n => n.diacritics.test(inputChar));
-
-    return Array.isArray(normalized) && normalized.length > 0 ? normalized[0].letter : inputChar;
-  } catch (e) {
-    throw e;
-  }
+function stringNormalize(s: string) {
+  const normalized = diacritics.filter(n => n.diacritics.test(s));
+  return !normalized.length ? s : normalized[0].letter;
 }
 
 export function normalizeSync(input?: string | null) {
@@ -134,7 +129,12 @@ export function normalizeSync(input?: string | null) {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
 
-  return !input.length ? input : input.replace(/(\S)/g, (_, p: string) => replaceDiacritics(p));
+  const replaceDiacritics =
+    'function' === typeof(''.normalize) && 'aeo' === nativeStringNormalize('áèö') ?
+      (s: string) => nativeStringNormalize(s) : (s: string) => stringNormalize(s);
+
+  return !input.length ?
+    input : input.replace(/(\S)/g, (_, p: string) => replaceDiacritics(p));
 }
 
 export async function normalize(input?: string | null) {
