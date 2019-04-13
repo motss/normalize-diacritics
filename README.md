@@ -82,7 +82,7 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 
 ```html
 <script type="module">
-  import { normlize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.js';
+  import { normalize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.js';
 
   /** Assuming top-level await is enabled... */
   normalize('söme stüff with áccènts')
