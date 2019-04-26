@@ -12,8 +12,9 @@ const pluginFn = (iife) => [
     configuration: `tslint${isProd ? '.prod' : ''}.json`,
   }),
   typescript({
-    tsconfig: `./tsconfig${iife ? '.iife' : ''}.json`,
+    tsconfig: './tsconfig.json',
     exclude: isProd ? ['src/(demo|test)/**/*'] : [],
+    ...(iife ? { tsconfigOverride: { target: 'es5' } } : {}),
   }),
   isProd && terser(),
   isProd && filesize({ showBrotliSize: true }),
@@ -24,22 +25,29 @@ const multiBuild = [
     input: ['src/index.ts'],
     file: 'dist/index.mjs',
     format: 'esm',
+    exports: 'named',
+    sourcemap: true,
   },
   {
     input: ['src/index.ts'],
     file: 'dist/index.js',
     format: 'cjs',
+    exports: 'named',
+    sourcemap: true,
   },
   {
     input: ['src/index.ts'],
     file: 'dist/normalize-diacritics.js',
     format: 'esm',
+    sourcemap: true,
   },
   {
     input: ['src/index.ts'],
     file: 'dist/normalize-diacritics.iife.js',
     name: 'NormalizeDiacritics',
     format: 'iife',
+    sourcemap: true,
+    exports: 'named',
   }
 ].map(({ input, ...n }) => ({ input, output: n, plugins: pluginFn('iife' === n.format) }));
 

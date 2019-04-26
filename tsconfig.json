@@ -3,16 +3,22 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": true,
+    "listEmittedFiles": true,
     "newLine": "LF",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
     "strict": true,
 
     "lib": [
+      "dom",
+      "dom.iterable",
       "esnext",
       "esnext.array",
       "esnext.asynciterable",
@@ -25,7 +31,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "declaration": true,
+    "declarationMap": true,
     "declarationDir": "dist"
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist"]
 }

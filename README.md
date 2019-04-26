@@ -38,6 +38,7 @@
   - [Browser](#browser)
     - [ES Modules](#es-modules)
     - [IIFE](#iife)
+- [deno](#deno)
 - [API Reference](#api-reference)
   - [normalize([input])](#normalizeinput)
   - [normalizeSync([input])](#normalizesyncinput)
@@ -105,6 +106,10 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 </script>
 ```
 
+## deno
+
+👉  Check out the [deno][] module at [deno_mod/normalize_diacritics][].
+
 ## API Reference
 
 ### normalize([input])
@@ -128,6 +133,8 @@ This methods works the same as `normalize([input])` except that this is the sync
 [node-releases-url]: https://nodejs.org/en/download/releases
 [typescript-url]: https://github.com/Microsoft/TypeScript
 [unpkg-url]: https://unpkg.com/normalize-diacritics@latest/dist/
+[deno]: https://github.com/denoland/deno
+[deno_mod/normalize_diacritics]: https://github.com/motss/deno_mod/tree/master/normalize_diacritics
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
@@ -178,4 +185,4 @@ This methods works the same as `normalize([input])` except that this is the sync
 
 [codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
 [codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/normalize-diacritics/blob/master/CODE_OF_CONDUCT.md
+[coc-url]: https://github.com/motss/normalize-diacritics/blob/master/code-of-conduct.md
