@@ -23,6 +23,7 @@
     "dist/*.d.ts.map",
     "dist/*.d.ts"
   ],
+  "sideEffects": false,
   "main": "./dist/index",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
