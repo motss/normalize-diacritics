@@ -14,7 +14,7 @@ const pluginFn = (iife) => [
   typescript({
     tsconfig: './tsconfig.json',
     exclude: isProd ? ['src/(demo|test)/**/*'] : [],
-    ...(iife ? { tsconfigOverride: { target: 'es5' } } : {}),
+    ...(iife ? { tsconfigOverride: { compilerOptions: { target: 'es5' } } } : {}),
   }),
   isProd && terser(),
   isProd && filesize({ showBrotliSize: true }),
