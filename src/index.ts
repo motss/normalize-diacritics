@@ -111,30 +111,26 @@ export const diacritics: Diacritics[] = [
 ];
 // tslint:enable:max-line-length
 
-function nativeStringNormalize(s: string) {
-  /**
-   * NOTE: Normalizing accents/ diacritics in ES6.
-   * See https://bit.ly/2Cncgor for more info.
-   */
-  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
-
-function stringNormalize(s: string) {
-  const normalized = diacritics.filter(n => n.diacritics.test(s));
-  return !normalized.length ? s : normalized[0].letter;
-}
-
 export function normalizeSync(input?: string | null) {
   if ('string' !== typeof(input)) {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
 
-  const replaceDiacritics =
-    'function' === typeof(''.normalize) && 'aeo' === nativeStringNormalize('áèö') ?
-      (s: string) => nativeStringNormalize(s) : (s: string) => stringNormalize(s);
-
+  /**
+   * NOTE(motss): Due to the fact that this module should do what we expect it to be - normalize
+   * accents/ diacritics. However, some characters are not accented such as those from
+   * [Latin-1 Supplement](https://bit.ly/2vz1l7m). Also see a relevant
+   * [GH issue](https://bit.ly/2JbAmH0).
+   *
+   * Hence, to match the mental module of the users, `String.prototype.normalize` should not be used
+   * as such.
+   */
   return !input.length ?
-    input : input.replace(/(\S)/g, (_, p: string) => replaceDiacritics(p));
+    input :
+    input.replace(/(\S)/g, (_, s: string) => {
+      const normalized = diacritics.find(n => n.diacritics.test(s));
+      return null == normalized ? s : normalized.letter;
+    });
 }
 
 export async function normalize(input?: string | null) {
