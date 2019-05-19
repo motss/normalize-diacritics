@@ -43,6 +43,8 @@
 - [API Reference](#api-reference)
   - [normalize([input])](#normalizeinput)
   - [normalizeSync([input])](#normalizesyncinput)
+- [Contributing](#contributing)
+  - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## Pre-requisite
@@ -102,7 +104,7 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 ```
 
 ## Demo
-
+[![Edit normalize-diacritics demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/normalizediacritics-demo-wl7ef?fontsize=14)
 
 
 ## deno
@@ -121,6 +123,12 @@ This method normalizes any accents/ diacritics found in a given input string and
 ### normalizeSync([input])
 
 This methods works the same as `normalize([input])` except that this is the synchronous version.
+
+## Contributing
+
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct][coc-url]. By participating in this project you agree to abide by its terms.
 
 ## License
 
