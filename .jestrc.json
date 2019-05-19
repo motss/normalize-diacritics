@@ -12,9 +12,9 @@
   },
   "collectCoverageFrom": [
     "!**/node_modules/**",
-    "!**/src/demo/**/*.(js|jsx)",
-    "!**/src/test*/**/*.(js|jsx)",
-    "<rootDir>/dist/**/*.(js|jsx)"
+    "!<rootDir>/dist/demo/**/*.js?(x)",
+    "!<rootDir>/dist/test*/**/*?(.spec).js?(x)",
+    "<rootDir>/dist/**/*.js?(x)"
   ],
   "verbose": true,
   "bail": true,
@@ -22,10 +22,6 @@
     "<rootDir>/dist/"
   ],
   "testMatch": [
-    "<rootDir>/dist/test*/**/*.spec.(js|jsx)"
-  ],
-  "moduleFileExtensions": [
-    "js",
-    "json"
+    "<rootDir>/dist/test*/index.spec.js?(x)"
   ]
 }

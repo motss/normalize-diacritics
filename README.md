@@ -37,7 +37,8 @@
   - [Node.js](#nodejs)
   - [Browser](#browser)
     - [ES Modules](#es-modules)
-    - [IIFE](#iife)
+    - [UMD](#umd)
+- [Demo](#demo)
 - [deno](#deno)
 - [API Reference](#api-reference)
   - [normalize([input])](#normalizeinput)
@@ -46,8 +47,8 @@
 
 ## Pre-requisite
 
-- [Node.js][node-js-url] >= 8.9.0
-- [NPM][npm-url] >= 5.5.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
+- [Node.js][node-js-url] >= 8.16.0
+- [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
 
 
 ## Install
@@ -83,28 +84,26 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 
 ```html
 <script type="module">
-  import { normalize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.js';
+  import { normalize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.min.js';
 
-  /** Assuming top-level await is enabled... */
-  normalize('söme stüff with áccènts')
-    .then(console.log) // 'some stuff with accents'
-    .catch(console.error);
+  // --snip
 </script>
 ```
 
-#### IIFE
+#### UMD
 
 ```html
-<script src="https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.iife.js"></script>
+<script src="https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.umd.min.js"></script>
 <script>
   const { normalize } = window.NormalizeDiacritics;
 
-  /** Assuming top-level await is enabled... */
-  normalize('söme stüff with áccènts')
-    .then(console.log) // 'some stuff with accents'
-    .catch(console.error);
+  // --snip
 </script>
 ```
+
+## Demo
+
+
 
 ## deno
 
@@ -172,7 +171,7 @@ This methods works the same as `normalize([input])` except that this is the sync
 
 [version-url]: https://www.npmjs.com/package/normalize-diacritics
 [node-version-url]: https://nodejs.org/en/download
-[mit-license-url]: https://github.com/motss/normalize-diacritics/blob/master/LICENSE
+[mit-license-url]: /LICENSE
 
 [downloads-url]: http://www.npmtrends.com/normalize-diacritics
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
@@ -185,4 +184,4 @@ This methods works the same as `normalize([input])` except that this is the sync
 
 [codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
 [codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
-[coc-url]: https://github.com/motss/normalize-diacritics/blob/master/code-of-conduct.md
+[coc-url]: /CODE-OF-CONDUCT.md

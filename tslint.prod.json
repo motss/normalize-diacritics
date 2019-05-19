@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "@messageflow/tslint-config"
-  ],
+  "extends": "./tslint.json",
   "rules": {
     "no-debugger": true
   }
