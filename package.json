@@ -51,7 +51,7 @@
     "rollup-plugin-filesize": "^6.1.1",
     "rollup-plugin-terser": "^5.1.1",
     "rollup-plugin-tslint": "^0.2.2",
-    "rollup-plugin-typescript2": "^0.21.2",
+    "rollup-plugin-typescript2": "^0.22.0",
     "shx": "^0.3.2",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
