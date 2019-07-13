@@ -128,7 +128,13 @@ export function normalizeSync(input?: string | null) {
   return !input.length ?
     input :
     input.replace(/(\S)/g, (_, s: string) => {
-      const normalized = diacritics.find(n => n.diacritics.test(s));
+      /**
+       * `lastIndex` will not get reset for each comparison if we are reusing the same RegExp.
+       * Here create a new copy of the RegExp instance before calling `.test()`.
+       *
+       * Issue: {@link https://github.com/motss/normalize-diacritics/issues/112|RegExp lastIndex}
+       */
+      const normalized = diacritics.find(n => new RegExp(n.diacritics).test(s));
       return null == normalized ? s : normalized.letter;
     });
 }

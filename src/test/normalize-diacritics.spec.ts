@@ -67,6 +67,24 @@ describe('normalize-diacritics', () => {
       expect(await normalize('\u00d8')).toStrictEqual('O');
     });
 
+    it(`normalizes repeated characters`, async () => {
+      const s = [
+        'éééé',
+        'åååå',
+        'éåéåéåéå',
+        'åéåéåéåé',
+      ];
+      const d = await Promise.all(s.map(async n => normalize(n)));
+      const expected = [
+        'eeee',
+        'aaaa',
+        'eaeaeaea',
+        'aeaeaeae',
+      ];
+
+      expect(d).toEqual(expected);
+    });
+
   });
 
 });
