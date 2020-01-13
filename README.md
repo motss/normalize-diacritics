@@ -49,8 +49,8 @@
 
 ## Pre-requisite
 
-- [Node.js][node-js-url] >= 8.16.0
-- [NPM][npm-url] >= 6.4.1 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
+- [Node.js][node-js-url] >= 10.18.1
+- [NPM][npm-url] >= 6.13.4 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
 
 
 ## Install
