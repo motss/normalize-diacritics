@@ -1,6 +1,6 @@
 {
   "name": "normalize-diacritics",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "description": "Remove accents/ diacritics in string",
   "keywords": [
     "diacritic",
