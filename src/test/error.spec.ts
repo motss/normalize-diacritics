@@ -1,4 +1,4 @@
-import { normalize } from '../normalize-diacritics.js';
+import { normalize } from '../index.js';
 
 const formatErrorMessage =
   (s: unknown) => new TypeError(`Expected 'input' to be of type string, but received '${s}'`);

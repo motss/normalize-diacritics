@@ -1,4 +1,4 @@
-import { normalize } from '../normalize-diacritics.js';
+import { normalize } from '../index.js';
 
 type TestSuccess = [string, undefined | null | string, string];
 test.each<TestSuccess>([
