@@ -65,7 +65,6 @@ const multiBuild = [
       sourcemap: true,
       sourcemapExcludeSources: true,
     },
-    experimentalOptimizeChunks: true,
     plugins: pluginFn(n.format, o),
     treeshake: { moduleSifeEffects: false },
     ...('umd' === n.format ? { context: 'window' } : {}),
