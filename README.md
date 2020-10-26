@@ -192,4 +192,4 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 
 [codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
 [codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
-[coc-url]: /CODE-OF-CONDUCT.md
+[coc-url]: /code-of-conduct.md
