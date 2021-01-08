@@ -111,7 +111,7 @@ export const diacritics: Diacritics[] = [
 ];
 // tslint:enable:max-line-length
 
-export function normalizeSync(input?: string | null) {
+export function normalizeSync(input?: string | null): string {
   if ('string' !== typeof(input)) {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
@@ -139,7 +139,7 @@ export function normalizeSync(input?: string | null) {
     });
 }
 
-export async function normalize(input?: string | null) {
+export async function normalize(input?: string | null): Promise<string> {
   return normalizeSync(input);
 }
 

@@ -2,17 +2,12 @@
 
 import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
-import tslint from 'rollup-plugin-tslint';
 import typescript from 'rollup-plugin-typescript2';
 
 const isProd = !process.env.ROLLUP_WATCH;
 const input = ['src/normalize-diacritics.ts'];
 const pluginFn = (format, minify) => {
   return [
-    isProd && tslint({
-      throwError: true,
-      configuration: `tslint${isProd ? '.prod' : ''}.json`,
-    }),
     typescript({
       tsconfig: './tsconfig.json',
       exclude: isProd ? ['src/(demo|test)/**/*'] : [],
