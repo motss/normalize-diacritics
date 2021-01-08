@@ -12,9 +12,10 @@
   },
   "collectCoverageFrom": [
     "!**/node_modules/**",
-    "!<rootDir>/dist/demo/**/*.js?(x)",
-    "!<rootDir>/dist/test*/**/*?(.spec).js?(x)",
-    "<rootDir>/dist/**/*.js?(x)"
+    "!<rootDir>/dist/demo/**/*.js",
+    "!<rootDir>/dist/test*/**/*.js",
+    "!<rootDir>/dist/test*/**/*.spec.js",
+    "<rootDir>/dist/**/*.js"
   ],
   "verbose": true,
   "bail": true,
@@ -22,6 +23,6 @@
     "<rootDir>/dist/"
   ],
   "testMatch": [
-    "<rootDir>/dist/test*/index.spec.js?(x)"
+    "<rootDir>/dist/test*/*.spec.js"
   ]
 }
