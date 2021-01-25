@@ -24,10 +24,10 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "default": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "node": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "default": "./dist/index.mjs"
     },
     "./dist/*": "./dist/*",
     "./normalize-diacritics": "./dist/normalize-diacritics.js"
