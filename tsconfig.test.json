@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "ES2019"
-  },
-  "include": ["src/*", "src/test/**/*"],
-  "exclude": ["src/demo*/**/*"]
-}
