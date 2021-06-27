@@ -40,6 +40,11 @@ jobs:
         with:
           node-version: ${{ matrix.target }}
 
+      - name: Install latest npm
+        if: env.CI_SKIP != 'true'
+        run: |
+          npm i -g npm@latest
+
       - name: List versions
         if: env.CI_SKIP != 'true'
         run: |
