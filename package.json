@@ -50,7 +50,7 @@
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
     "prepublishOnly": "npm run check && npm run lint && npm run build",
     "rollup": "rollup -c ./rollup.config.js",
-    "test": "c8 --reporter=lcov uvu -r @swc/register src/tests",
+    "test": "c8 --reporter=lcov --exclude=src/tests uvu -r @swc/register src/tests",
     "test:watch": "npm run clean && watchlist src -- npm t",
     "ts": "tsc",
     "watch": "tsc --watch",
