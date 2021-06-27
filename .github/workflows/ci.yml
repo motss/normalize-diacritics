@@ -69,7 +69,7 @@ jobs:
       - name: Test
         if: env.CI_SKIP != 'true'
         run: |
-          npm run jest
+          npm t
 
       - name: Upload coverage to codecov
         uses: codecov/codecov-action@v1

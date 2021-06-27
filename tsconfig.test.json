@@ -1,9 +1,13 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
+    "outDir": ".tmp",
+    "declaration": false,
+    "declarationMap": false,
+    "declarationDir": null,
+    "module": "CommonJS",
     "target": "ES2019"
   },
-  "include": ["src/*", "src/test/**/*"],
+  "include": ["src"],
   "exclude": ["src/demo*/**/*"]
 }
