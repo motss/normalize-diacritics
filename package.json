@@ -55,7 +55,8 @@
     "test": "c8 --reporter=lcov --exclude=.tmp/tests uvu .tmp/tests",
     "test:watch": "npm run clean && npm run build:test && concurrently --restart-tries=3 --raw 'npm run build:test -- --watch' 'watchlist .tmp -- npm t'",
     "ts": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "prepare": "npm x -- husky install"
   },
   "husky": {
     "hooks": {
@@ -65,7 +66,7 @@
   "devDependencies": {
     "@reallyland/tsconfig": "^3.0.2",
     "@skypack/package-check": "^0.2.2",
-    "@types/node": "^15.12.4",
+    "@types/node": "^15.12.5",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
     "c8": "^7.7.3",
@@ -73,7 +74,6 @@
     "eslint": "^7.17.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-regexp": "^0.12.1",
-    "husky": "^4.3.0",
     "rollup": "^2.29.0",
     "rollup-plugin-filesize": "^9.0.2",
     "rollup-plugin-terser": "^7.0.2",
