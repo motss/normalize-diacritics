@@ -5,7 +5,6 @@
     "declaration": false,
     "declarationMap": false,
     "declarationDir": null,
-    "module": "CommonJS",
     "target": "ES2019"
   },
   "include": ["src"],

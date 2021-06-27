@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        target: [12.x, 14.x]
+        target: [14.x, 16.x]
 
     steps:
       - name: Checkout
@@ -43,7 +43,7 @@ jobs:
       - name: List versions
         if: env.CI_SKIP != 'true'
         run: |
-          node -v && npm -v && which npm
+          node -v && npm -v && which npm && pwd && ls -la
 
       - name: Install dependencies
         if: env.CI_SKIP != 'true'
@@ -54,17 +54,6 @@ jobs:
         if: env.CI_SKIP != 'true'
         run: |
           npm run lint
-
-      - name: Build
-        if: env.CI_SKIP != 'true'
-        run: |
-          npm run build:test
-
-      - name: Check build
-        if: env.CI_SKIP != 'true'
-        shell: bash
-        run: |
-          pwd && ls -la
 
       - name: Test
         if: env.CI_SKIP != 'true'

@@ -1,1 +1,1 @@
-export * from './normalize-diacritics.js';
+export * from './normalize-diacritics';

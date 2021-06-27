@@ -1,7 +1,7 @@
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import { normalize } from '../index.js';
+import { normalize } from '..';
 
 type TestSuccess = [undefined | null | string, string];
 

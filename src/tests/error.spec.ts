@@ -1,7 +1,7 @@
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 
-import { normalize } from '../index.js';
+import { normalize } from '..';
 
 const formatErrorMessage =
   (s: unknown) => new TypeError(`Expected 'input' to be of type string, but received '${s}'`);
