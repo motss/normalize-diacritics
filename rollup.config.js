@@ -5,7 +5,7 @@ import filesize from 'rollup-plugin-filesize';
 import typescript from 'rollup-plugin-typescript2';
 
 const isProd = !process.env.ROLLUP_WATCH;
-const input = ['src/normalize-diacritics.ts'];
+const input = ['src/index.ts'];
 const pluginFn = (format, minify) => {
   return [
     typescript({
@@ -47,10 +47,6 @@ const multiBuild = [
     name: 'NormalizeDiacritics',
     exports: 'named',
   },
-  {
-    file: 'dist/normalize-diacritics.js',
-    format: 'esm',
-  },
 ].reduce((p, n) => {
   const opts = [false, true].map(o => ({
     input,
@@ -61,7 +57,7 @@ const multiBuild = [
       sourcemapExcludeSources: true,
     },
     plugins: pluginFn(n.format, o),
-    treeshake: { moduleSifeEffects: false },
+    treeshake: { moduleSideEffects: false },
     ...('umd' === n.format ? { context: 'window' } : {}),
   }));
 
