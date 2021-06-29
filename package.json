@@ -53,7 +53,7 @@
     "test:watch": "npm run clean && watchlist src -- npm t",
     "ts": "tsc",
     "watch": "tsc --watch",
-    "prepare": "npm x -- husky install"
+    "prepare": "npm x -- husky@latest install"
   },
   "dependencies": {
     "tslib": "^2.1.0"
