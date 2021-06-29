@@ -29,8 +29,7 @@
       "node": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     },
-    "./dist/*": "./dist/*",
-    "./normalize-diacritics": "./dist/normalize-diacritics.js"
+    "./dist/*": "./dist/*"
   },
   "main": "./dist/index",
   "module": "./dist/index.mjs",
