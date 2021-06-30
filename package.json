@@ -45,7 +45,7 @@
     "check": "package-check",
     "clean": "shx rm -rf .*cache *.log .tmp coverage/ dist/ logs/",
     "postinstall": "npm dedupe",
-    "lint": "eslint",
+    "lint": "eslint src/**/*.ts",
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
     "prepublishOnly": "npm run check && npm run lint && npm run build",
     "rollup": "rollup -c ./rollup.config.js",
@@ -55,10 +55,16 @@
     "watch": "tsc --watch",
     "prepare": "npm x -- husky@latest install"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "dependencies": {
     "tslib": "^2.1.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
     "@reallyland/tsconfig": "^3.0.2",
     "@skypack/package-check": "^0.2.2",
     "@swc/register": "^0.1.7",
@@ -69,6 +75,7 @@
     "eslint": "^7.17.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-regexp": "^0.12.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "rollup": "^2.29.0",
     "rollup-plugin-filesize": "^9.0.2",
     "rollup-plugin-terser": "^7.0.2",
