@@ -10,7 +10,6 @@ const pluginFn = (format, minify) => {
   return [
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: isProd ? ['src/(demo|test)/**/*'] : [],
       ...('umd' === format ? { tsconfigOverride: { compilerOptions: { target: 'es5' } } } : {}),
     }),
     isProd && minify && terser({
@@ -39,6 +38,11 @@ const multiBuild = [
   {
     file: 'dist/index.js',
     format: 'cjs',
+    exports: 'named',
+  },
+  {
+    file: 'dist/normalize-diacritics.js',
+    format: 'esm',
     exports: 'named',
   },
   {
