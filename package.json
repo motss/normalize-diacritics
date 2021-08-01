@@ -1,6 +1,6 @@
 {
   "name": "normalize-diacritics",
-  "version": "2.15.1-rc.2",
+  "version": "3.0.0-rc.1",
   "description": "Remove accents/ diacritics in string",
   "keywords": [
     "diacritic",
@@ -22,38 +22,37 @@
     "url": "https://github.com/motss"
   },
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "node": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./dist/*": "./dist/*"
   },
-  "main": "./dist/index",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "files": [
     "dist/*.*js.map",
     "dist/*.*js",
     "dist/*.d.ts.map",
-    "dist/*.d.ts"
+    "dist/*.d.ts",
+    "!**/*test*/**/*.*"
   ],
   "scripts": {
-    "build": "npm run clean && npm run rollup",
+    "build": "npm run clean && npm run ts",
     "check": "package-check",
     "clean": "shx rm -rf .*cache *.log .tmp coverage/ dist/ logs/",
     "postinstall": "npm dedupe",
     "lint": "eslint src/**/*.ts",
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
-    "prepublishOnly": "npm run check && npm run lint && npm run build",
-    "rollup": "rollup -c ./rollup.config.js",
+    "prepublishOnly": "npm run check && npm run lint:build && npm run build",
     "test": "c8 --reporter=lcov --exclude=src/tests uvu -r @swc/register src/tests",
     "test:watch": "npm run clean && watchlist src -- npm t",
     "ts": "tsc",
     "watch": "tsc --watch",
-    "prepare": "npm x -- husky@latest install"
+    "prepare": "npm x -y -- husky@latest install"
   },
   "commitlint": {
     "extends": [
@@ -76,18 +75,14 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-regexp": "^0.13.2",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "rollup": "^2.29.0",
-    "rollup-plugin-filesize": "^9.0.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
     "shx": "^0.3.2",
     "typescript": "^4.1.3",
     "uvu": "^0.5.1",
     "watchlist": "^0.2.3"
   },
   "engines": {
-    "node": ">= 10.18.1",
-    "npm": ">= 6.13.4"
+    "node": ">= 14.17.3",
+    "npm": ">= 6.14.13"
   },
   "publishConfig": {
     "access": "public"

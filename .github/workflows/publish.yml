@@ -39,7 +39,7 @@ jobs:
         run: |
           npm ci --quiet
 
-      - name: Publish to npm (Prereleae)
+      - name: Publish to npm (Prerelease)
         if: contains(github.ref, '-') == true
         run: |
           npm config list

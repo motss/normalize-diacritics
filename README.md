@@ -34,10 +34,7 @@
 - [Install](#install)
 - [Usage](#usage)
   - [TypeScript or ES Modules](#typescript-or-es-modules)
-  - [Node.js](#nodejs)
   - [Browser](#browser)
-    - [ES Modules](#es-modules)
-    - [UMD](#umd)
 - [Demo](#demo)
 - [deno](#deno)
 - [API Reference](#api-reference)
@@ -49,15 +46,16 @@
 
 ## Pre-requisite
 
-- [Node.js][node-js-url] >= 10.18.1
-- [NPM][npm-url] >= 6.13.4 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
+- [Node.js][node-js-url] >= 14.17.3
+- [NPM][npm-url] >= 6.14.13 ([NPM][npm-url] comes with [Node.js][node-js-url] so there is no need to install separately.)
+- [ES Modules]
 
 
 ## Install
 
 ```sh
 # Install via NPM
-$ npm install --save normalize-diacritics
+$ npm i normalize-diacritics
 ```
 
 ## Usage
@@ -71,34 +69,12 @@ import { normalize } from 'normalize-diacritics';
 await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 ```
 
-### Node.js
-
-```js
-const { normalize } = require('normalize-diacritics');
-
-/** Assuming top-level await is enabled... */
-await normalize('söme stüff with áccènts'); // 'some stuff with accents'
-```
-
 ### Browser
-
-#### ES Modules
 
 ```html
 <script type="module">
-  import { normalize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.min.js';
-
-  // --snip
-</script>
-```
-
-#### UMD
-
-```html
-<script src="https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.umd.min.js"></script>
-<script>
-  const { normalize } = window.NormalizeDiacritics;
-
+  import { normalize } from 'https://cdn.skypack.dev/normalize-diacritics@latest';
+  
   // --snip
 </script>
 ```
@@ -142,6 +118,7 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [unpkg-url]: https://unpkg.com/normalize-diacritics@latest/dist/
 [deno]: https://github.com/denoland/deno
 [deno_mod/normalize_diacritics]: https://github.com/motss/deno_mod/tree/master/normalize_diacritics
+[ES Modules]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 <!-- MDN -->
 [map-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
