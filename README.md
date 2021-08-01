@@ -55,7 +55,7 @@
 
 ```sh
 # Install via NPM
-$ npm install --save normalize-diacritics
+$ npm i normalize-diacritics
 ```
 
 ## Usage
@@ -73,8 +73,8 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 
 ```html
 <script type="module">
-  import { normalize } from 'https://unpkg.com/normalize-diacritics@latest/dist/normalize-diacritics.min.js';
-
+  import { normalize } from 'https://cdn.skypack.dev/normalize-diacritics@latest';
+  
   // --snip
 </script>
 ```
