@@ -38,21 +38,26 @@
     "dist/*.*js",
     "dist/*.d.ts.map",
     "dist/*.d.ts",
+    "postinstall.mjs",
     "!**/*test*/**/*.*"
   ],
   "scripts": {
-    "build": "npm run clean && npm run ts",
-    "check": "package-check",
-    "clean": "shx rm -rf .*cache *.log .tmp coverage/ dist/ logs/",
-    "postinstall": "npm dedupe",
-    "lint": "eslint src/**/*.ts",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf .*cache *.log .swc/ coverage/ dist/ logs/",
+    "postinstall": "npm x -y -- zx ./postinstall.mjs",
+    "lint": "eslint src --ext .js,.ts",
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
-    "prepublishOnly": "npm run check && npm run lint:build && npm run build",
+    "lint:commit": "npm x -y -- commitlint --edit",
+    "pre-commit": "package-check && nano-staged && tsc --noEmit",
+    "prepublishOnly": "package-check && npm run lint:build && npm run build",
     "test": "c8 --reporter=lcov --exclude=src/tests uvu -r @swc/register src/tests",
     "test:watch": "npm run clean && watchlist src -- npm t",
     "ts": "tsc",
-    "watch": "tsc --watch",
-    "prepare": "npm x -y -- husky@latest install"
+    "watch": "tsc --watch"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run pre-commit",
+    "commit-msg": "npm run lint:commit"
   },
   "commitlint": {
     "extends": [
@@ -63,28 +68,32 @@
     "tslib": "^2.1.0"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^13.1.0",
-    "@reallyland/tsconfig": "^3.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@reallyland/tsconfig": "^4.0.1",
     "@skypack/package-check": "^0.2.2",
-    "@swc/register": "^0.1.7",
-    "@types/node": "^16.4.3",
-    "@typescript-eslint/eslint-plugin": "^4.12.0",
-    "@typescript-eslint/parser": "^4.12.0",
-    "c8": "^7.7.3",
-    "eslint": "^7.17.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-regexp": "^1.0.0",
+    "@swc/register": "^0.1.10",
+    "@types/node": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "c8": "^7.11.0",
+    "eslint": "^8.8.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-regexp": "^1.5.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "shx": "^0.3.2",
-    "typescript": "^4.4.2",
-    "uvu": "^0.5.1",
+    "nano-staged": "^0.5.0",
+    "simple-git-hooks": "^2.7.0",
+    "typescript": "^4.5.5",
+    "uvu": "^0.5.3",
     "watchlist": "^0.3.0"
   },
   "engines": {
-    "node": ">= 14.17.3",
-    "npm": ">= 6.14.13"
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nano-staged": {
+    "*.ts": "npm run lint:build -- --fix"
   }
 }
