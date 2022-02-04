@@ -44,15 +44,15 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf .*cache *.log .swc/ coverage/ dist/ logs/",
-    "postinstall": "npm x -y -- zx ./postinstall.mjs",
+    "postinstall": "npm x --prefer-online -y -- zx@latest ./postinstall.mjs",
     "lint": "eslint src --ext .js,.ts",
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
-    "lint:commit": "npm x -y -- commitlint --edit",
+    "lint:commit": "npm x -y -- commitlint@latest --edit",
     "pre-commit": "package-check && nano-staged && tsc --noEmit",
     "prepublishOnly": "package-check && npm run lint:build && npm run build",
-    "test": "c8 --reporter=lcov --exclude=src/tests uvu -r @swc/register src/tests",
+    "test": "uvu -r @swc/register src/tests",
+    "test:coverage": "c8 --reporter=lcov --exclude=src/tests npm t",
     "test:watch": "npm run clean && watchlist src -- npm t",
-    "ts": "tsc",
     "watch": "tsc --watch"
   },
   "simple-git-hooks": {

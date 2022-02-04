@@ -17,13 +17,9 @@
 [![Packagephobia][packagephobia-badge]][packagephobia-url]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia-url]
 
-[![CircleCI][circleci-badge]][circleci-url]
-[![Dependency Status][daviddm-badge]][daviddm-url]
+[![ci][ga-badge]][ga-url]
 [![codecov][codecov-badge]][codecov-url]
-[![Coverage Status][coveralls-badge]][coveralls-url]
 
-[![codebeat badge][codebeat-badge]][codebeat-url]
-[![Codacy Badge][codacy-badge]][codacy-url]
 [![Code of Conduct][coc-badge]][coc-url]
 
 > Simple [NPM][npm-url] package to remove any accents/ diacritics found in a string.
@@ -141,14 +137,9 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [packagephobia-badge]: https://flat.badgen.net/packagephobia/install/normalize-diacritics
 [bundlephobia-badge]: https://flat.badgen.net/bundlephobia/minzip/normalize-diacritics
 
-[circleci-badge]: https://flat.badgen.net/circleci/github/motss/normalize-diacritics/master?icon=circleci
-[daviddm-badge]: https://flat.badgen.net/david/dep/motss/normalize-diacritics
+[ga-badge]: https://github.com/motss/normalize-diacritics/actions/workflows/ci.yml/badge.svg
 [codecov-badge]: https://flat.badgen.net/codecov/c/github/motss/normalize-diacritics?label=codecov&icon=codecov
-[coveralls-badge]: https://flat.badgen.net/coveralls/c/github/motss/normalize-diacritics?label=coveralls
 
-[codacy-badge]: https://api.codacy.com/project/badge/Grade/c84a41b8422245058a8c1acd17fd7e23
-[inch-badge]: http://inch-ci.org/github/motss/normalize-diacritics.svg?branch=master
-[codebeat-badge]: https://codebeat.co/badges/8a0eb7c1-b944-41b1-ad87-5f0bd392873b
 [coc-badge]: https://flat.badgen.net/badge/code%20of/conduct/pink
 
 <!-- Links -->
@@ -162,11 +153,7 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [packagephobia-url]: https://packagephobia.now.sh/result?p=normalize-diacritics
 [bundlephobia-url]: https://bundlephobia.com/result?p=normalize-diacritics
 
-[circleci-url]: https://circleci.com/gh/motss/normalize-diacritics/tree/master
-[daviddm-url]: https://david-dm.org/motss/normalize-diacritics
+[ga-url]: https://github.com/motss/normalize-diacritics/actions/workflows/ci.yml
 [codecov-url]: https://codecov.io/gh/motss/normalize-diacritics
-[coveralls-url]: https://coveralls.io/github/motss/normalize-diacritics?branch=master
 
-[codebeat-url]: https://codebeat.co/projects/github-com-motss-normalize-diacritics-master
-[codacy-url]: https://www.codacy.com/app/motss/normalize-diacritics?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=motss/normalize-diacritics&amp;utm_campaign=Badge_Grade
 [coc-url]: /code-of-conduct.md
