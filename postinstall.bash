@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm x -y -- zx@latest ./postinstall.mjs
+npx -y -- zx@latest ./postinstall.mjs
