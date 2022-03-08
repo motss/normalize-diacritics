@@ -6,23 +6,25 @@
 NPX_CACHE_DIR="$(npm config get cache)/_npx"
 
 if [ -d "$NPX_CACHE_DIR" ]; then
-  FILES=$(find $NPX_CACHE_DIR -type f | grep -v 'node_modules' | grep -v 'package-lock.json')
-  # FILES=$(find $NPX_CACHE_DIR -type f | grep -v 'node_modules')
+  FILES=$(find "$NPX_CACHE_DIR" -type f | grep -v 'node_modules' | grep -v 'package-lock.json')
+  # FILES=$(find "$NPX_CACHE_DIR" -type f | grep -v 'node_modules')
 
-  echo '[INFO] Listing all files in the npx cache...'
-
+  printf '[INFO] Listing all files in the npx cache...\n'
   for a in $FILES
   do
-    echo "::group::$a"
-    cat $a
-    echo $'\n'
-    echo "::endgroup::"
+    printf "::group::$a\n"
+    cat "$a"
+    printf "::endgroup::\n"
   done
 else
-  echo '[INFO] npx cache not found!'
+  printf '[INFO] npx cache not found!\n'
 fi
 
 # NOTE: List all files with human readable size in the npm cache
 
-# echo "::group::$(ls -lhR $(npm config get cache) || echo 'nil')"
-# echo "::endgroup::"
+# NPM_CACHE_DIR="$(npm config get cache)"
+
+# if [ -d "$NPM_CACHE_DIR" ]; then
+#   printf "::group::$(ls -lhR "$NPM_CACHE_DIR")\n"
+#   printf "::endgroup::"
+# fi
