@@ -12,7 +12,7 @@ if [ -d "$NPX_CACHE_DIR" ]; then
   printf '[INFO] Listing all files in the npx cache...\n'
   for a in $FILES
   do
-    printf "::group::$a\n"
+    printf "::group::%s\n" "$a"
     cat "$a"
     printf "::endgroup::\n"
   done
@@ -25,6 +25,8 @@ fi
 # NPM_CACHE_DIR="$(npm config get cache)"
 
 # if [ -d "$NPM_CACHE_DIR" ]; then
-#   printf "::group::$(ls -lhR "$NPM_CACHE_DIR")\n"
+#   FILES=$(ls -lhR "$NPM_CACHE_DIR")
+
+#   printf "::group::%s\n" "$FILES"
 #   printf "::endgroup::"
 # fi
