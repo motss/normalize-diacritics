@@ -85,9 +85,9 @@ jobs:
       - name: Install dependencies
         if: env.CI_SKIP == 'false'
         run: |
-          bash ./list-npx-cache.bash
+          bash ./list-npx-cache.sh
           npm ci
-          bash ./list-npx-cache.bash
+          bash ./list-npx-cache.sh
 
       - name: Lint
         if: env.CI_SKIP == 'false'
