@@ -70,7 +70,7 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 ```html
 <script type="module">
   import { normalize } from 'https://cdn.skypack.dev/normalize-diacritics@latest';
-  
+
   // --snip
 </script>
 ```
@@ -126,7 +126,7 @@ Please note that this project is released with a [Contributor Code of Conduct][c
 [promise-mdn-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 <!-- Badges -->
-  [follow-me-badge]: https://flat.badgen.net/twitter/follow/igarshmyb?icon=twitter
+[follow-me-badge]: https://flat.badgen.net/twitter/follow/igarshmyb?icon=twitter
 
 [version-badge]: https://flat.badgen.net/npm/v/normalize-diacritics?icon=npm
 [node-version-badge]: https://flat.badgen.net/npm/node/normalize-diacritics
