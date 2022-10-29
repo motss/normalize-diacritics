@@ -4,21 +4,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-## [3.0.9](https://github.com/motss/normalize-diacritics/compare/v3.0.8...v3.0.9) (2022-10-29)
+## [3.0.10](https://github.com/motss/normalize-diacritics/compare/v3.0.8...v3.0.10) (2022-10-29)
 
-
-### build
-
-* update README, fix missing path in exports map ([f0cad87](https://github.com/motss/normalize-diacritics/commit/f0cad8792d901e50e403cd717344ba33e6c2aaaa))
 
 ### chore
 
-* update GH templates ([3d51111](https://github.com/motss/normalize-diacritics/commit/3d511116b8337387dfaab00be654f44a40e15b82))
-
-### refactor
-
-* improve toolings ([48e575f](https://github.com/motss/normalize-diacritics/commit/48e575fa1374a998c6ed0304a6265fab100037fb))
-* minor rename in benchmarks ([d5231c7](https://github.com/motss/normalize-diacritics/commit/d5231c748d4aa0838948a5d32552e303f591c1ec))
+* improve toolings for better DX (#126) ([5f96d66](https://github.com/motss/normalize-diacritics/commit/5f96d660ccd8f44d8511a930c97814a9c7ea8f64)), closes [#126](https://github.com/motss/normalize-diacritics/issues/126)
 
 
 
