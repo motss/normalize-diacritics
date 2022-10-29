@@ -26,6 +26,6 @@
 
 ### Versions of affected system
 
-- **normalize-diacritics version**:
-- **Node.js version**:
+- **Package version**:
 - **Platform details** _(e.g. macOS Sierra 10.12.4)_:
+- **Other versions**:

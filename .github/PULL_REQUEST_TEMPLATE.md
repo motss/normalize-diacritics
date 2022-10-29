@@ -1,28 +1,30 @@
-### 💥  Breaking change
+### Description
 
-<!-- 1. Complete rewrite from ground up. -->
+<!-- Tag the link to the issue ticket and write a summary of the problem and your solution(s), e.g.
 
+Fix #1 by adding B and refactoring C.
+-->
 
-### 🐛  Fixes
+### Changes
 
-<!-- 1. Minor fix on issue. -->
+<!-- Write a list of changes of your PR, e.g.
 
+- Add A
+- Update B
+- Remove C
+- Rename D
+- Refactor E by doing E1
+- Update tests after all the above changes
+-->
 
-### 🎨 Cleanup
+### Testings
 
-<!-- 1. Minor cleanup after rewrite. -->
+<!-- Add screenshots or recordings of your new changes. -->
 
+### Dependencies
 
-### ✏️ Typo
+<!-- List all dependencies, if any, e.g.
 
-<!-- 1. Typo in documentation for codes. -->
-
-
-### 📝  Documentation
-
-<!-- 1. Updated README with breaking changes. -->
-
-
-### :neckbeard: Reviewers
-
-<!-- @master_bear PTAL and review the changes made. -->
+1. [ ] #1
+2. [ ] Currently blocked by #2
+-->
