@@ -1,25 +1,18 @@
-import { test } from 'uvu';
-import * as assert from 'uvu/assert';
+import { describe, expect, it } from 'vitest';
 
 import { normalize } from '..';
 
-const formatErrorMessage =
-  (s: unknown) => new TypeError(`Expected 'input' to be of type string, but received '${s}'`);
-
-const testParams: (null | undefined)[] = [
-  null,
-  undefined,
-];
-
-
-for (const a of testParams) {
-  test(`normalize ${a}`, async () => {
+describe(normalize.name, () => {
+  it.each<null | undefined>([
+    null,
+    undefined,
+  ])('throws error when calling normalize(%s)', async (testInput) => {
     try {
-      await normalize(a);
-    } catch (e) {
-      assert.equal(e, formatErrorMessage(a));
+      await normalize(testInput);
+    } catch (error) {
+      expect(error).toEqual(
+        new TypeError(`Expected 'input' to be of type string, but received '${testInput}'`)
+      );
     }
   });
-}
-
-test.run();
+});
