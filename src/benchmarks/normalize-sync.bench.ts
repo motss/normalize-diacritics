@@ -3,7 +3,7 @@ import { bench, describe } from 'vitest';
 import { normalizeSync } from '..';
 
 describe(normalizeSync.name, () => {
-  bench('empty string', () => {
+  bench('<empty_string>', () => {
     normalizeSync('');
   });
 
