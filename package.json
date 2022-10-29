@@ -40,10 +40,10 @@
       "import": "./dist/normalize.js",
       "default": "./dist/normalize.js"
     },
-    "./normalizeSync": {
-      "types": "./dist/normalizeSync.d.ts",
-      "import": "./dist/normalizeSync.js",
-      "default": "./dist/normalizeSync.js"
+    "./normalize-sync": {
+      "types": "./dist/normalize-sync.d.ts",
+      "import": "./dist/normalize-sync.js",
+      "default": "./dist/normalize-sync.js"
     },
     "./dist/*": "./dist/*"
   },
