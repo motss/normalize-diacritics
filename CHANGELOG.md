@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+## [3.0.11-rc.0](https://github.com/motss/normalize-diacritics/compare/v3.0.10...v3.0.11-rc.0) (2022-10-29)
+
+
+### ci
+
+* trying to fix expressions in name ([b0823e2](https://github.com/motss/normalize-diacritics/commit/b0823e2f652ae01976c56cd43ea98e3a7a3ba9c4))
+* trying to fix expressions in name [ci skip] ([7113e2d](https://github.com/motss/normalize-diacritics/commit/7113e2d9aa362b3e56ec2b905c77e1b38891717f))
+
+
+
 ## [3.0.10](https://github.com/motss/normalize-diacritics/compare/v3.0.8...v3.0.10) (2022-10-29)
 
 
@@ -409,8 +419,3 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ## [0.2.3](https://github.com/motss/normalize-diacritics/compare/v0.2.2...v0.2.3) (2017-03-29)
-
-
-
-
-## [0.2.2](https://github.com/motss/normalize-diacritics/compare/v0.2.1...v0.2.2) (2017-03-29)
