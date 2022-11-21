@@ -38,7 +38,6 @@
     "dist/*.*js",
     "dist/*.d.ts.map",
     "dist/*.d.ts",
-    "postinstall.*",
     "!**/*test*/**/*.*"
   ],
   "scripts": {
@@ -49,7 +48,6 @@
     "lint:build": "npm run lint -- --config .build.eslintrc.json",
     "lint:commit": "npm x -y -- commitlint@latest --edit",
     "pre-commit": "package-check && nano-staged && tsc --noEmit",
-    "prepublishOnly": "package-check && npm run lint:build && npm run build",
     "test": "uvu -r @swc/register src/tests",
     "test:coverage": "c8 --reporter=lcov --exclude=src/tests npm t",
     "test:watch": "npm run clean && watchlist src -- npm t",
