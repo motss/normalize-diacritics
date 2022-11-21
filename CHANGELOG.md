@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+# [4.0.0](https://github.com/motss/normalize-diacritics/compare/v4.0.0-rc.0...v4.0.0) (2022-11-21)
+
+
+
+
 # [4.0.0-rc.0](https://github.com/motss/normalize-diacritics/compare/v3.0.10...v4.0.0-rc.0) (2022-11-21)
 
 
@@ -417,8 +422,3 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ## [0.2.4](https://github.com/motss/normalize-diacritics/compare/v0.2.3...v0.2.4) (2017-04-03)
-
-
-
-
-## [0.2.3](https://github.com/motss/normalize-diacritics/compare/v0.2.2...v0.2.3) (2017-03-29)
