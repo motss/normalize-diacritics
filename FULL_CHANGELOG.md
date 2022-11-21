@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+## [3.0.11-rc.0](https://github.com/motss/normalize-diacritics/compare/v3.0.10...v3.0.11-rc.0) (2022-11-21)
+
+
+### chore
+
+* update dependencies ([67b8a6d](https://github.com/motss/normalize-diacritics/commit/67b8a6dcfb07d0708b98fbeeb4f447eefb77e904))
+
+### ci
+
+* remove scripts.postinstall in CI scripts (#130) ([d593ffb](https://github.com/motss/normalize-diacritics/commit/d593ffb1bbe1a7a3087ddf4fcb90333814c3a17f)), closes [#130](https://github.com/motss/normalize-diacritics/issues/130)
+
+
+
 ## [3.0.10](https://github.com/motss/normalize-diacritics/compare/v3.0.8...v3.0.10) (2022-10-29)
 
 
