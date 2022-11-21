@@ -63,7 +63,20 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm pkg delete scripts.postinstall
           npm ci
+
+      - name: Lint
+        run: |
+          npm run lint:build
+
+      - name: Build
+        run: |
+          npm run build
+
+      - name: Cleanup package.json
+        run: |
+          npm pkg delete devDependencies nano-staged scripts
 
       - name: Publish to npm (Prerelease)
         if: contains(github.ref, '-rc') == true || contains(github.ref, '-') == true

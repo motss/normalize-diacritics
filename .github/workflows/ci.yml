@@ -69,6 +69,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm pkg delete scripts.postinstall
           npm ci
           sh $(npm root)/@reallyland/tools/list-npx-cache.sh
 
@@ -123,6 +124,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm pkg delete scripts.postinstall
           npm ci
           sh $(npm root)/@reallyland/tools/list-npx-cache.sh
 
@@ -186,6 +188,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm pkg delete scripts.postinstall
           npm ci
           sh $(npm root)/@reallyland/tools/list-npx-cache.sh
 
