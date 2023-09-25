@@ -5,7 +5,7 @@ import type { Diacritics } from './types.js';
  *   1. https://bit.ly/2Fc0HB1
  *   2. https://bit.ly/2ComN2J
  */
- export const diacritics: Diacritics[] = [
+export const diacritics: Diacritics[] = [
   { letter: ' ', diacritics: /\u00A0/g },
   { letter: '0', diacritics: /\u07C0/g },
   { letter: 'A', diacritics: /[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g },
@@ -92,8 +92,7 @@ import type { Diacritics } from './types.js';
   { letter: 'p', diacritics: /[\u0070\u24DF\uFF50\u1E55\u1E57\u01A5\u1D7D\uA751\uA753\uA755]/g },
   { letter: 'q', diacritics: /[\u0071\u24E0\uFF51\u024B\uA757\uA759]/g },
   { letter: 'r', diacritics: /[\u0072\u24E1\uFF52\u0155\u1E59\u0159\u0211\u0213\u1E5B\u1E5D\u0157\u1E5F\u024D\u027D\uA75B\uA7A7\uA783]/g },
-  { letter: 's', diacritics: /[\u0073\u24E2\uFF53\u00DF\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/g },
-  { letter: 'ss', diacritics: /\xDF/g },
+  { letter: 's', diacritics: /[\u0073\u24E2\uFF53\u00DF\xDF\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/g },
   { letter: 't', diacritics: /[\u0074\u24E3\uFF54\u1E6B\u1E97\u0165\u1E6D\u021B\u0163\u1E71\u1E6F\u0167\u01AD\u0288\u2C66\uA787]/g },
   { letter: 'th', diacritics: /\u00FE/g },
   { letter: 'tz', diacritics: /\uA729/g },

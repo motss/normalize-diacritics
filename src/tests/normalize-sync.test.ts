@@ -16,6 +16,7 @@ describe(normalizeSync.name, () => {
     // non-accented characters (Latin-1 Supplement)
     { input: `tromsø`, output: 'tromso' },
     { input: `\u00d8`, output: 'O' },
+    { input: `Muße`, output: 'Muse' },
 
     // repeated characters
     { input: `éééé`, output: 'eeee' },
