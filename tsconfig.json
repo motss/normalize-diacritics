@@ -2,9 +2,15 @@
   "extends": "./node_modules/@reallyland/tools/browser/tsconfig.json",
   "compilerOptions": {
     "declarationDir": "dist",
+    "ignoreDeprecations": "5.0",
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
