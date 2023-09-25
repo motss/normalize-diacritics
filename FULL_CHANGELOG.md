@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+## [4.0.1](https://github.com/motss/normalize-diacritics/compare/v4.0.0...v4.0.1) (2023-09-25)
+
+
+### chore
+
+* cleanup ([2367a96](https://github.com/motss/normalize-diacritics/commit/2367a96e59ce44161cbe2193d2c8a1aeed6b168f))
+* update dependencies ([04e4cb1](https://github.com/motss/normalize-diacritics/commit/04e4cb15c8ec94866426d2e4fb29675e01472f11))
+* update dependencies ([9830946](https://github.com/motss/normalize-diacritics/commit/9830946f9b43f09bdb8972cc142ef2df0bb995c1))
+
+### fix
+
+* fix #137 ([a5c8adc](https://github.com/motss/normalize-diacritics/commit/a5c8adc92c86ec028578c19221a8fdd2108ed131)), closes [#137](https://github.com/motss/normalize-diacritics/issues/137)
+
+
+
 # [4.0.0](https://github.com/motss/normalize-diacritics/compare/v4.0.0-rc.0...v4.0.0) (2022-11-21)
 
 
