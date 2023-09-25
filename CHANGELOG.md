@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
-## [4.0.1](https://github.com/motss/normalize-diacritics/compare/v4.0.0...v4.0.1) (2023-09-25)
+## [4.0.2](https://github.com/motss/normalize-diacritics/compare/v4.0.0...v4.0.2) (2023-09-25)
 
 
 ### chore
