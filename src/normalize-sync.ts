@@ -1,6 +1,6 @@
 import { diacritics } from './diacritics.js';
 
-export function normalizeSync(input?: string | null): string {
+export function normalizeSync(input: string): string {
   if ('string' !== typeof(input)) {
     throw new TypeError(`Expected 'input' to be of type string, but received '${input}'`);
   }
@@ -28,6 +28,5 @@ export function normalizeSync(input?: string | null): string {
     );
 
     return normalized == null ? s : normalized.letter;
-    // return null == normalized ? s : normalized.letter;
   });
 }

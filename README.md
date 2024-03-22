@@ -85,14 +85,14 @@ await normalize('söme stüff with áccènts'); // 'some stuff with accents'
 
 ## API Reference
 
-### normalize([input])
+### `normalize([input])`
 
-- `input` <?[string][string-mdn-url]> Optional input string that contains accents/ diacritics.
+- `input` <[string][string-mdn-url]> input string that contains accents/diacritics.
 - returns: <[Promise][promise-mdn-url]<[string][string-mdn-url]>> Promise which resolves with normalized input string.
 
 This method normalizes any accents/ diacritics found in a given input string and output a normalized string as a result.
 
-### normalizeSync([input])
+### `normalizeSync([input])`
 
 This methods works the same as `normalize([input])` except that this is the synchronous version.
 
