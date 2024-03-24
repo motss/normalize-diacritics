@@ -8,6 +8,7 @@ describe(normalize.name, () => {
     undefined,
   ])('throws error when calling normalize(%s)', async (testInput) => {
     try {
+      // @ts-expect-error - Intentionally passing invalid input
       await normalize(testInput);
     } catch (error) {
       expect(error).toEqual(
