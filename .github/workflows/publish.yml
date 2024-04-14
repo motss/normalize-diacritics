@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        target: [18.x]
+        target: [20.x]
 
     steps:
       - name: Checkout
