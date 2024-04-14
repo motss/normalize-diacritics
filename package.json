@@ -1,6 +1,6 @@
 {
   "name": "normalize-diacritics",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "Remove accents/ diacritics in string",
   "keywords": [
     "diacritic",
@@ -70,6 +70,12 @@
     "test": "vitest --coverage",
     "version": "sh $(npm root)/@reallyland/tools/generate-changelogs.sh && git add *CHANGELOG.md"
   },
+  "nano-staged": {
+    "*.ts": [
+      "npm run lint:build -- -f 1",
+      "git add"
+    ]
+  },
   "dependencies": {
     "tslib": "^2.4.0"
   },
@@ -85,11 +91,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "nano-staged": {
-    "*.ts": [
-      "npm run lint:build -- -f 1",
-      "git add"
-    ]
   }
 }
