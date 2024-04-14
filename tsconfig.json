@@ -3,6 +3,7 @@
   "compilerOptions": {
     "declarationDir": "dist",
     "ignoreDeprecations": "5.0",
+    "skipLibCheck": true,
     "outDir": "dist",
     "rootDir": "src"
   },
