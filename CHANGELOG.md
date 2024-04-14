@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+## [5.0.1](https://github.com/motss/normalize-diacritics/compare/5.1.0...5.0.1) (2024-04-14)
+
+
+
+
+# [5.1.0](https://github.com/motss/normalize-diacritics/compare/v5.0.0...5.1.0) (2024-04-14)
+
+
+### ci
+
+* bump nodejs version in publish.yml ([ea29903](https://github.com/motss/normalize-diacritics/commit/ea2990390d0f8a6e92144a927feb29f80c30ead9))
+
+
+
 # [5.0.0](https://github.com/motss/normalize-diacritics/compare/v4.0.3...v5.0.0) (2024-04-14)
 
 
@@ -425,13 +439,3 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 ## [0.4.3](https://github.com/motss/normalize-diacritics/compare/v0.4.2...v0.4.3) (2017-12-17)
-
-
-
-
-## [0.4.2](https://github.com/motss/normalize-diacritics/compare/v0.4.1...v0.4.2) (2017-12-17)
-
-
-
-
-## [0.4.1](https://github.com/motss/normalize-diacritics/compare/v0.4.0...v0.4.1) (2017-12-06)
